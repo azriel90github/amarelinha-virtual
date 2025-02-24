@@ -1,0 +1,151 @@
+{
+  "buttons": {
+    "menuButton": "Ondi",
+    "cartButton": "Okilamba"
+  },
+
+  "modal": {
+    "modalContact": {
+      "title": "Kutamba",
+      "numero": "Ocikwata",
+      "social": "Ongombisoko",
+      "email": "Email"
+    },
+    "modalGallery": {
+      "title": "Fotu"
+    },
+    "modalLanguage": {
+      "umbundu": "Umbundu",
+      "kimbundo": "Kimbundu",
+      "portugues": "Portugal",
+      "ingles": "Ingleza",
+      "frances": "Francesa",
+      "chines": "Txina",
+      "russo": "Rúxia"
+
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "Vimbo",
+      "title": "Sola o vimbo",
+      "category1": "Menta",
+      "category2": "Cokolate",
+      "category3": "Morangu",
+      "searchPlaceholder": "Okulonga...",
+      "noResults": "Kahinga kali okuti"
+    },
+    "Searchbox": "Omu"
+  },
+
+  "blogpage": {
+    "h2": "Okwetu",
+    "par1": "Wamukongo! Ndje Cunha Shombossi, uluvo nembela wa Geladaria Italala. Uvuko wange ovelako kupanga i-sabores okundjenga otembo, ona ulufino okuhepa ice cream ki kaunga okuzama okushenga esela.",
+    "par2": "Na Geladaria Italala, okumbwako asu okumba vinene kimpindo shikala ke uwu. Omukonde kwatu we ice cream okundja kitimo ki amuro, okwala nomfuti i sabores kanyemo. Tusamya utendelo i artisanal efi okwezi, tukwenya ku omwendo okuhepa.",
+    "par3": "Na Italala, okulekele u kwatu kanyemo, otembo o-ndje kaye, okundja okuleka okusama okusama ice cream woshipi. Okumbela tuvingo akuti vianda vana-mbeve uve mba konti ne-se om-lactose. Funga na social media yetu.",
+    "h3": "Afiduma",
+    "dep1": "Ice cream na ole oma! Vibango imwe ngunyo ne texe okufuna kukonda.",
+    "dep2": "Ice cream na ole oma! Vibango imwe ngunyo ne texe okufuna kukonda.",
+    "dep3": "Ice cream na ole oma! Vibango imwe ngunyo ne texe okufuna kukonda.",
+    "dep4": "Ice cream na ole oma! Vibango imwe ngunyo ne texe okufuna kukonda."
+  },
+
+  "homepage": {
+    "h3modal": "Kamba lyokutunda",
+    "gallery": "Galeria",
+    "description": "Kukuma ko kima okwiikala ko kilingo lyo!",
+    "buttonBlog": "Blogue",
+    "buttonContact": "Kutala",
+    "buttonMenu": "Menu",
+    "buttonCart": "Makala",
+    "buttonLibrary": "Oviluvulu",
+    "terms": "Okwenda kima na itala virtual, olonga okuti ulenda kuza na ‘termos de uso’ na ‘políticas de privacidade’.",
+    "footer": "Kudi programá Suélio Armando JS na Xtreme Programming",
+    "programador": "Omutekeniko"
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "Okulilongolola k’Opya",
+    "colheres": "Omasu",
+    "adicionarCarrinho": "Etelela Okima",
+    "removerCarrinho": "Onjila Okima",
+    "adicionarSucesso": "Okwetelewa Kovavi",
+    "removerSucesso": "Removido com sucesso",
+    "descricao": "Etuvi"
+  },
+
+  "modalQr": {
+    "botaoFechar": "Kwata",
+    "baixarQr": "Sokota QR Code",
+    "copiarLink": "Kopiya Link"
+  },
+
+  "orderpage": {
+    "h3menu": "Ondi yoku kuka",
+    "h2order": "Oukamba wa cimbu ci kuka",
+    "sabores": "Ovimbo",
+    "pagamento": "Okukula",
+    "adicionar": "Ku tiya ovivimbo",
+    "remover": "Ku katula ovivimbo",
+    "h2encomendar": "Kuka Ngolo",
+    "h2selectMethod": "Ka sola oukukula",
+    "money": "Ombiji",
+    "express": "Multicaixa Express", 
+    "tpa": "TPA - Omunhu u li u muntu",
+    "placeholderName": "Ovina",
+    "placeholderNumber": "O njimbu (+244)",
+    "placeholderPaymentMethod": "Oukukula",
+    "placeholderCityOrNeighborhood": "O mbanza mba okutimba",
+    "placeholderLandmark": "Ocimbu ci ku sanga",
+    "send": "Tuma",
+    "reset": "Katula yosi",
+    "modalSend": "Omunima ua tumina kiambote",
+    "modalSendh3": "Omunima ua kondwa:",
+   "modalSendP1": "Mu kava kala Multicaixa Express o Transfêrencia, encomenda kyo kalele nda kakulu ombu, makande tuma kalamba ka kulipuka ku Whatsapp wa loja ya gelado",
+    "modalSendButton2": "Tuma ku Whatsapp",
+    "modalSendButton3": "Sokoka okulipuka ku konso",
+    "validationAllFields": "Mbakiya tula etunga ke vu"
+  },
+
+  "fatura": {
+    "gps1": "Evenida Komandante Valódia, nº 69",
+    "gps2": "Lwimbo lwa Kinaxixi - Luanda",
+    "gps3": "Angola",
+    "clienteh3": "Olhundo lwe Muntu",
+    "nome": "Lwenu : ",
+    "numero": "Namba : ",
+    "bairro": "Okiteta owa Nkombo : ",
+    "referencia": "Mubundu wa Ndondo : ",
+    "encomendah3": "Vikambu vya Nsonge",
+    "nomeEncomenda": "Lwenu",
+    "preco": "Lwatu",
+    "colheres": "Makombo",
+    "total": "Tota",
+    "resumoh3": "Vikambu vya Nsonge",
+    "totalSabores": "Tota ya Matata",
+    "totalPagar": "Tota ya Kufutika",
+    "metodoPagamento": "Lungundulu wa Kufutika",
+    "data": "Ndiya",
+    "pedido": "Nsonge"
+  },
+
+  "biblioteca": {
+    "bibliotecah3": "Ekwiko lya Online",
+    "faturaDigital": "Xikola kya Kalunga",
+    "baixarFatura": "Okukwatya",
+    "coordenadasBancarias": "Mabanka a Kalunga",
+    "baixarCoordenadas": "Okukwatya"
+  }
+
+}
+

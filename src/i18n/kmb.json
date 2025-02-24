@@ -1,0 +1,151 @@
+{
+  "buttons": {
+    "menuButton": "Kalunga",
+    "cartButton": "kalambula"
+  },
+
+  "modal": {
+    "modalContact": {
+      "title": "kutubha",
+      "numero": "Nkumbu",
+      "social": "Muambukisho",
+      "email": "Email"
+    },
+    "modalGallery": {
+      "title": "Foto"
+    },
+    "modalLanguage": {
+      "umbundu": "Umbundu",
+      "kimbundo": "Kimbundu",
+      "portugues": "Portugal",
+      "ingles": "Ingleza",
+      "frances": "Francesa",
+      "chines": "Txina",
+      "russo": "Rúxia"
+
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "Kimbandu",
+      "title": "Sanga kimbandu",
+      "category1": "Menta",
+      "category2": "Cokolate",
+      "category3": "Morangu",
+      "searchPlaceholder": "Kulonga...",
+      "noResults": "Kibinga kina kiami"
+    },
+    "Searchbox": "Ontu"
+  },
+
+  "blogpage": {
+    "h2": "Kuna Kisalu",
+    "par1": "Moninga! Ngué Cunha Shombossi, nzinga yama na mutima wa Geladaria Italala. Voké yama ku kuvala mikese miyele yama kikondi keti, ne kotamba ntoto yama kutenda mbote mu bantu, voyenda puwa likisi kuvuaká vose wa esalu ya ice cream.",
+    "par2": "Na Geladaria Italala, tukamusa ngatu yingazi ya mbandu, ne nsinga yama kitina. Kizindula ki ice cream kisalakana comu kutenda vose ki amoru ne carimbo, ku kumbi kutalanguza zulu zimbote na kusa buho yama kupwete ki bunyomo. Mbotu kutumbula kisalu yama artisanal, kisalakana miimbo yamekusu na kavatu mu mudidi wa kisalu na kuvalula kisalu.",
+    "par3": "Na Italala, va umetu nkenge ya kimwendo ne nfela, kutenda ka ice cream no luyangu malu na kimweto. Mbozi, kenge ndete ya mambote, tukenda i options veganas ne sem lactose, kutu ndete ngona vose vutamba mutumbu ka ice cream.  Batyama nasu ku mga social media na kumbiaka vose zvandimvuka epe. Tefwe lelemela nasu!",
+    "h3": "Mikambo",
+    "dep1": "Ice cream kinshi kisangu! Sabores miene ne texuturas kisalu. Kisendi ke ki cliente fiel.",
+    "dep2": "Ice cream kinshi kisangu! Sabores miene ne texuturas kisalu. Kisendi ke ki cliente fiel.",
+    "dep3": "Ice cream kinshi kisangu! Sabores miene ne texuturas kisalu. Kisendi ke ki cliente fiel.",
+    "dep4": "Ice cream kinshi kisangu! Sabores miene ne texuturas kisalu. Kisendi ke ki cliente fiel."
+  },
+  "homepage": {
+    "h3modal": "Kamba kima",
+    "gallery": "Galeria",
+    "description": "Kukuma na kima kiwombo ke kepe na kiambote!",
+    "buttonBlog": "Blogue",
+    "buttonContact": "Kuvandula",
+    "buttonMenu": "Menu",
+    "buttonCart": "Kaxilumbu",
+    "buttonLibrary": "Kilivulu",
+    "terms": "Kuwena kima na itala virtual, o lenda kuza na kuntunu ki 'termos de uso' na 'políticas de privacidade'.",
+    "footer": "Kudi programá Suélio Armando JS na Xtreme Programming",
+    "programador": "Muhinga wa Mibanza"
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "Mbanzo wa Kilunda",
+    "colheres": "Masu",
+    "adicionarCarrinho": "Kwanisa ku Kima",
+    "removerCarrinho": "Tumbu ku Kima",
+    "adicionarSucesso": "Kwanisiwa kwa Muene",
+    "removerSucesso": "Tumiswa kwa Muene",
+    "descricao": "Etuvi"
+  },
+
+  "modalQr": {
+    "botaoFechar": "Kwata",
+    "baixarQr": "Sokota QR Code",
+    "copiarLink": "Kopiya Link"
+  },
+
+  "orderpage": {
+    "h3menu": "Kalunga ia ku sumba",
+    "h2order": "Ungi ua kima ki kuka",
+    "sabores": "Mbandu",
+    "pagamento": "Kubha",
+    "adicionar": "Tiana mbandu",
+    "remover": "Katula mbandu",
+    "h2encomendar": "Koka Ngolo",
+    "h2selectMethod": "Sanga njila ia kubha",
+    "money": "Mbiji",
+    "express": "Multicaixa Express", 
+    "tpa": "TPA - Mu ndenge",
+    "placeholderName": "Jina",
+    "placeholderNumber": "Kimbangu (+244)",
+    "placeholderPaymentMethod": "Njila ia kubha",
+    "placeholderCityOrNeighborhood": "Mbanza mba kilombo",
+    "placeholderLandmark": "Kidimu kia ku sanga",
+    "send": "Tuma",
+    "reset": "Katula yonso",
+    "modalSend": "Njimbu tua tumina kiambote",
+    "modalSendh3": "Mbondo ia dikota:",
+    "modalSendP1": "Mu kaba kala Multicaixa Express o Transfêrencia, encomenda kyo kalele nda kakulu umbu, makanda tuma kilamba kya kulipuka mu Whatsapp wa loja ya gelado",
+    "modalSendButton2": "Tuma mu Whatsapp",
+    "modalSendButton3": "Sokola kulipuka ku konso",
+    "validationAllFields": "Mbakisha tula matunga ke vu"
+  },
+
+  "fatura": {
+    "gps1": "Evenida ya Komandante Valódia, nº 69",
+    "gps2": "Largo ya Kinaxixi - Luanda",
+    "gps3": "Angola",
+    "clienteh3": "Basa ya Muntu",
+    "nome": "Nzo : ",
+    "numero": "Nambote : ",
+    "bairro": "Kidi kifuva kana Nkombo : ",
+    "referencia": "Mbotama ya Ndondo : ",
+    "encomendah3": "Takala ya Nsungi",
+    "nomeEncomenda": "Nzo",
+    "preco": "Mbote",
+    "colheres": "Makombo",
+    "total": "Tota",
+    "resumoh3": "Takala ya Nsungi",
+    "totalSabores": "Tota ya Liyalelo",
+    "totalPagar": "Tota ya Kufutika",
+    "metodoPagamento": "Lungungulundu ya Kufutika",
+    "data": "Ndiya",
+    "pedido": "Nsungi"
+  },
+
+  "biblioteca": {
+    "bibliotecah3": "Dilonga wa Online",
+    "faturaDigital": "Kolekta ya Xikola",
+    "baixarFatura": "Kulonga",
+    "coordenadasBancarias": "Mabanka ya Kalunga",
+    "baixarCoordenadas": "Kulonga"
+  }
+
+  
+}
+

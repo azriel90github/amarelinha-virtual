@@ -1,0 +1,150 @@
+{
+  "buttons": {
+    "menuButton": "Menu",
+    "cartButton": "Cart"
+  },
+
+  "modal": {
+    "modalContact": {
+      "title": "Contact Us",
+      "numero": "Number",
+      "social": "Social",
+      "email": "Email"
+    },
+    "modalGallery": {
+      "title": "Gallery"
+    },
+    "modalLanguage": {
+      "umbundu": "Umbundu",
+      "kimbundo": "Kimbundu",
+      "portugues": "Portuguese",
+      "ingles": "English",
+      "frances": "French",
+      "chines": "Chinese",
+      "russo": "Russian"
+
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "Category",
+      "title": "Choose category",
+      "category1": "Mint",
+      "category2": "Chocolate",
+      "category3": "Strawberry",
+      "searchPlaceholder": "Search...",
+      "noResults": "No product found"
+    },
+    "Searchbox": "All"
+  },
+
+  "blogpage": {
+    "h2": "About Us",
+    "par1": "Hello! I am Cunha Shombossi, the mind and heart behind Geladaria Italala. My passion for creating unique flavors and offering sweet moments to people began many years ago when I discovered the magic a simple ice cream can bring to someone's day.",
+    "par2": "At Geladaria Italala, we use only fresh, high-quality ingredients. All our ice creams are made with great care and love to ensure an explosion of flavors in every bite. We value the artisanal process, and every detail is thought through to provide the best experience to our customers.",
+    "par3": "At Italala, you'll find a family-friendly, relaxed atmosphere, perfect for enjoying a delicious ice cream in good company. In addition to our traditional flavors, we offer vegan and lactose-free options so that everyone can enjoy this experience. Follow us on social media to stay updated on our promotions and news. Visit us today or place your order here!",
+    "h3": "Testimonials",
+    "dep1": "The best ice cream I've ever had! Amazing flavors and perfect texture. I’m already a loyal customer.",
+    "dep2": "The best ice cream I've ever had! Amazing flavors and perfect texture. I’m already a loyal customer.",
+    "dep3": "The best ice cream I've ever had! Amazing flavors and perfect texture. I’m already a loyal customer.",
+    "dep4": "The best ice cream I've ever had! Amazing flavors and perfect texture. I’m already a loyal customer."
+  },
+
+  "homepage": {
+    "h3modal": "Select Language",
+    "gallery": "Gallery",
+    "description": "Place your order from anywhere and anytime!",
+    "buttonBlog": "Blogue",
+    "buttonContact": "Connect",
+    "buttonMenu": "Menu",
+    "buttonCart": "Cart",
+    "buttonLibrary": "Library",
+    "terms": "By placing your orders through itala virtual you automatically agree to our terms of use and privacy policies.",
+    "footer": "Programmed by Suélio Armando JS eXtreme Programming",
+    "programador": "Programmer"
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "Product Details",
+    "colheres": "Spoons",
+    "adicionarCarrinho": "Add to Cart",
+    "removerCarrinho": "Remove from Cart",
+    "adicionarSucesso": "Added Successfully",
+    "removerSucesso": "Removed Successfully",
+    "descricao": "Description"
+  },
+
+  "modalQr": {
+    "botaoFechar": "Close",
+    "baixarQr": "Download QR Code",
+    "copiarLink": "Copy Link"
+  },
+
+  "orderpage": {
+    "h3menu": "Shopping Cart",
+    "h2order": "Order Details",
+    "sabores": "Flavors",
+    "pagamento": "Payment",
+    "adicionar": "Add Flavors",
+    "remover": "Remove Flavors",
+    "h2encomendar": "Order Now",
+    "h2selectMethod": "Select payment method",
+    "money": "Cash",
+    "express": "Multicaixa Express", 
+    "tpa": "TPA - Face-to-face",
+    "placeholderName": "Name",
+    "placeholderNumber": "Number(+244)",
+    "placeholderPaymentMethod": "Payment Method",
+    "placeholderCityOrNeighborhood": "City or Neighborhood",
+    "placeholderLandmark": "Landmark",
+    "send": "Send",
+    "reset": "Clear",
+    "modalSend": "Message sent successfully",
+    "modalSendh3": "Important Reminder:",
+    "modalSendP1": "If your payment method is Multicaixa Express or Bank Transfer, the order will only be delivered after sending the payment receipt, which must be sent via the ice cream shop's WhatsApp",
+    "modalSendButton2": "Send via WhatsApp",
+    "modalSendButton3": "Choose cash on delivery",
+    "validationAllFields": "Please fill in all fields"
+  },
+
+  "fatura": {
+    "gps1": "Comandante Valódia Avenue, nº 69",
+    "gps2": "Kinaxixi Square - Luanda",
+    "gps3": "Angola",
+    "clienteh3": "Customer Data",
+    "nome": "Name : ",
+    "numero": "Number : ",
+    "bairro": "City or Neighborhood : ",
+    "referencia": "Reference Point : ",
+    "encomendah3": "Order Details",
+    "nomeEncomenda": "Name",
+    "preco": "Price",
+    "colheres": "Spoons",
+    "total": "Total",
+    "resumoh3": "Order Summary",
+    "totalSabores": "Total Flavors",
+    "totalPagar": "Total Payment",
+    "metodoPagamento": "Payment Method",
+    "data": "Date",
+    "pedido": "Order"
+  },
+
+  "biblioteca": {
+    "bibliotecah3": "Online Library",
+    "faturaDigital": "Digital Invoice",
+    "baixarFatura": "Download",
+    "coordenadasBancarias": "Bank Details",
+    "baixarCoordenadas": "Download"
+  }
+
+}

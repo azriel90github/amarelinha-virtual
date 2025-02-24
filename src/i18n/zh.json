@@ -1,0 +1,117 @@
+{
+  "buttons": {
+    "menuButton": "菜单",
+    "cartButton": "车"
+  },
+  
+  "modal": {
+    "modalContact": {
+      "title": "联系我们",
+      "numero": "数字",
+      "social": "社会",
+      "email": "电子邮件"
+    },
+    "modalGallery": {
+      "title": "图库"
+    },
+    "modalLanguage": {
+      "umbundu": "恩邦杜语",
+      "kimbundo": "金邦杜语",
+      "portugues": "葡萄牙语",
+      "ingles": "英语",
+      "frances": "法语",
+      "chines": "中文",
+      "russo": "俄语"
+
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "类别",
+      "title": "选择类别",
+      "category1": "薄荷",
+      "category2": " 巧克力",
+      "category3": " 草莓",
+      "searchPlaceholder": "搜索...",
+      "noResults": "未找到产品"
+    },
+    "Searchbox": "全部"
+  },
+
+  "blogpage": {
+    "h2": "关于我们",
+    "par1": "您好！我是Cunha Shombossi，是Geladaria Italala的创意和核心。多年前，我开始热衷于创造独特的口味并为人们带来甜蜜的时刻，因为我发现一份简单的冰淇淋可以为某人的一天带来魔力。",
+    "par2": "在Geladaria Italala，我们只使用新鲜优质的食材。我们的所有冰淇淋都精心制作，带着满满的爱，确保每一口都充满丰富的风味体验。我们重视手工制作的过程，每个细节都经过精心设计，以提供给客户最佳的体验。",
+    "par3": "在Italala，您会找到一个温馨放松的氛围，非常适合在友好陪伴下享受美味的冰淇淋。除了传统口味外，我们还提供纯素和无乳糖选项，让每个人都能体验到这种美好。关注我们的社交媒体，随时了解我们的促销活动和新品。今天就来拜访我们，或在这里下单！",
+    "h3": "客户评价",
+    "dep1": "这是我吃过的最好的冰淇淋！惊人的口味和完美的口感。我已经成为忠实顾客。",
+    "dep2": "这是我吃过的最好的冰淇淋！惊人的口味和完美的口感。我已经成为忠实顾客。",
+    "dep3": "这是我吃过的最好的冰淇淋！惊人的口味和完美的口感。我已经成为忠实顾客。",
+    "dep4": "这是我吃过的最好的冰淇淋！惊人的口味和完美的口感。我已经成为忠实顾客。"
+  },
+  "homepage": {
+    "h3modal": "选择语言",
+    "gallery": "画廊",
+    "description": "随时随地下单！",
+    "buttonBlog": "博客",
+    "buttonContact": "呼叫",
+    "buttonMenu": "菜单",
+    "buttonCart": "购物车",
+    "buttonLibrary": "图书馆",
+    "terms": "通过 itala virtual 下单，即表示您自动同意我们的使用条款和隐私政策。",
+    "footer": "由 Suélio Armando JS 和 Xtreme Programming 编程"
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "产品详情",
+    "colheres": "勺子",
+    "adicionarCarrinho": "加入购物车",
+    "removerCarrinho": "从购物车中移除",
+    "adicionarSucesso": "添加成功",
+    "removerSucesso": "成功移除",
+    "descricao": "描述"
+  },
+
+  "modalQr": {
+    "botaoFechar": "关闭",
+    "baixarQr": "下载二维码",
+    "copiarLink": "复制链接"
+  },
+
+  "orderpage": {
+    "h3menu": "购物车",
+    "h2order": "订单详情",
+    "sabores": "味",
+    "pagamento": "付",
+    "adicionar": "添加口味",
+    "remover": "删除口味",
+    "h2encomendar": "立即下单",
+    "h2selectMethod": "选择付款方式",
+    "money": "现金",
+    "express": "Multicaixa Express", 
+    "tpa": "TPA - 面对面",
+    "placeholderName": "姓名",
+    "placeholderNumber": "号码(+244)",
+    "placeholderPaymentMethod": "付款方式",
+    "placeholderCityOrNeighborhood": "城市或街区",
+    "placeholderLandmark": "地标",
+    "send": "发送",
+    "reset": "清除",
+    "modalSend": "邮件发送成功",
+    "modalSendh3": "重要提示:",
+   "modalSendP1": "如果您的付款方式是 Multicaixa Express 或银行转账，则订单仅会在发送付款凭证后交付，凭证需通过冰激凌店的 WhatsApp 发送",
+    "modalSendButton2": "通过 WhatsApp 发送",
+    "modalSendButton3": "选择货到付款",
+    "validationAllFields": "请填写所有字段"
+}
+}

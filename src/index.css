@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	min-width: 0;
+}
+
+::-webkit-inner-spin-button {
+	display: none;
+}
+
+.error {
+	color: #EF4444;
+	display: block;
+	font-size: 0.9em;
+	margin: 5px 0 0 5px;
+	}
+	
+@media (max-width: 768px) {
+
+	.paymentMobile {
+		width: 100%;
+	}
+
+	.produtDetailMobile {
+		display: flex;
+		flex-direction: column;
+		padding-top: 10px;
+	}
+
+	.produtDetailMobileButton {
+		padding-bottom: 7rem;
+	}
+
+	.starDiv {
+		justify-content: center;
+	}
+
+	.produtDetailDescMobile {
+		display: flex;
+		text-align: center;
+		align-items: center;
+	}
+
+	.homeBlogue {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.libraryPage {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.queryFooterBlog {
+		padding-left: 0.75rem;
+		justify-content: left;
+	}
+
+	.accountButton {
+		width: 100%;
+	}
+
+	.cardProd {
+		width: 21.5rem;
+	}
+
+}
+
+
+
+
+
+

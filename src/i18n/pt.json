@@ -1,0 +1,154 @@
+{
+  "buttons": {
+    "menuButton": "Cárdapio",
+    "cartButton": "Carrinho"
+  },
+
+  "modal": {
+    "modalContact": {
+      "title": "Entrar em contacto",
+      "numero": "Número",
+      "social": "Social",
+      "email": "Email"
+    },
+    "modalTerms": {
+      "title": "Termos de uso e políticas de privacidade"
+    },
+    "modalLanguage": {
+      "umbundu": "Umbundu",
+      "kimbundo": "Kimbundu",
+      "lingala": "Lingala",
+      "portugues": "Português",
+      "ingles": "Inglês",
+      "espanhol": "Espanhol",
+      "frances": "Francês",
+      "chines": "Chinês",
+      "russo": "Russo"
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "Categoria",
+      "title": "Escolher categoria",
+      "category1": "Menta",
+      "category2": "Chocolate",
+      "category3": "Morango",
+      "searchPlaceholder": "Pesquisar...",
+      "noResults": "Nenhum produto encontrado"
+    },
+    "Searchbox": "Categoria"
+  },
+
+  "blogpage": {
+    "h2": "Direção Executiva",
+    "par1": "Olá! Sou o Cunha Shombossi, a mente e o coração por trás da Geladaria Italala. Minha paixão por criar sabores únicos e oferecer momentos doces para as pessoas começou há muitos anos, quando descobri a magia que um simples sorvete pode trazer para o dia de alguém.",
+    "par2": "Na Geladaria Itala, usamos apenas ingredientes frescos e de alta qualidade. Todos os nossos sorvetes são preparados com muito cuidado e amor, para garantir uma explosão de sabores em cada mordida. Valorizamos o processo artesanal, e cada detalhe é pensado para oferecer a melhor experiência aos nossos clientes.",
+    "par3": "Na Italala, você encontrará um ambiente familiar e descontraído, perfeito para saborear um delicioso sorvete em boa companhia. Além dos nossos sabores tradicionais, oferecemos opções veganas e sem lactose, para que todos possam aproveitar essa experiência. Acompanhe nossas redes sociais e fique por dentro das nossas promoções e novidades, Visite-nos ja, ou faça sua encomenda por aqui!",
+    "h3": "Depoimentos",
+    "dep1": "O melhor sorvete que já provei! Sabores incríveis e textura perfeita. Já virei cliente fiel",
+    "dep2": "O melhor sorvete que já provei! Sabores incríveis e textura perfeita. Já virei cliente fiel",
+    "dep3": "O melhor sorvete que já provei! Sabores incríveis e textura perfeita. Já virei cliente fiel",
+    "dep4": "O melhor sorvete que já provei! Sabores incríveis e textura perfeita. Já virei cliente fiel"
+  },
+
+  "homepage": {
+    "h3modal": "Selecionar Idioma",
+    "gallery": "Políticas e Termos",
+    "description": "Faça sua encomenda de qualquer lugar e a qualquer hora!",
+    "buttonBlog": "Blogue",
+    "buttonContact": "Contactos",
+    "buttonMenu": "Cárdapio",
+    "buttonCart": "Carrinho",
+    "buttonLibrary": "Biblioteca",
+    "terms": "Ao fazer suas encomendas pela itala virtual você automaticamente concorda com nossos termos de uso e políticas de privacidade.",
+    "footer": "Programado por Suélio Armando JS eXtreme Programming",
+    "programador": "Programador"
+  },
+
+  "menupage": {
+
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "Detalhes Produto",
+    "colheres": "Colheres",
+    "adicionarCarrinho": "Adicionar no Carrinho",
+    "removerCarrinho": "Remover do Carrinho",
+    "adicionarSucesso": "Adicionado com sucesso",
+    "removerSucesso": "Removido com sucesso",
+    "descricao": "Descrição"
+  },
+
+  "modalQr": {
+    "botaoFechar": "Fechar",
+    "baixarQr": "Baixar QR Code",
+    "copiarLink": "Copiar Link"
+  },
+
+  "orderpage": {
+    "h3menu": "Carrinho de Compras",
+    "h2order": "Detalhes Encomenda",
+    "sabores": "Sabores",
+    "pagamento": "Pagamento",
+    "adicionar": "Adicionar Sabores",
+    "remover": "Remover Sabores",
+    "h2encomendar": "Encomendar - Agora",
+    "h2selectMethod": "Método de pagamento",
+    "money": "Dinheiro em mão",
+    "express": "Multicaixa Express",
+    "tpa": "Transfência Bancária",
+    "placeholderName": "Nome",
+    "placeholderNumber": "Número(+244)",
+    "placeholderPaymentMethod": "Método de Pagamento",
+    "placeholderCityOrNeighborhood": "Cidade, bairro ou Rua",
+    "placeholderLandmark": "Ponto de Referência",
+    "send": "Enviar",
+    "reset": "Limpar",
+    "modalSend": "Mensagem enviada com sucesso",
+    "modalSendh3": "Nota Importante:",
+    "modalSendP1": "Caso seu método de pagamento seja Multicaixa Express ou Transfêrencia, a encomenda será entregue apenas, depois do envio do comprovativo de pagamento, que deve ser enviado pelo whatsapp da geladaria",
+    "modalSendButton2": "Enviar pelo Whatsapp",
+    "modalSendButton3": "Escolhe dinheiro em mão",
+    "validationAllFields": "Por favor preencha todos os campos"
+  },
+
+  "fatura": {
+    "gps1": "Avenida Comandante Valódia, nº 69",
+    "gps2": "Largo do Kinaxixi - Luanda",
+    "gps3": "Angola",
+    "clienteh3": "Dados do Cliente",
+    "nome": "Nome : ",
+    "numero": "Número : ",
+    "bairro": "Cidade, bairro ou Rua : ",
+    "referencia": "Ponto de Referência : ",
+    "encomendah3": "Detalhes Encomenda",
+    "nomeEncomenda": "Nome",
+    "preco": "Preço",
+    "colheres": "Colheres",
+    "total": "Total",
+    "resumoh3": "Resumo da Encomenda",
+    "totalSabores": "Total de Sabores",
+    "totalPagar": "Total Pagamento",
+    "metodoPagamento": "Método de Pagamento",
+    "data": "Data",
+    "pedido": "Pedido"
+  },
+
+  "biblioteca": {
+    "bibliotecah3": "Biblioteca Online",
+    "faturaDigital": "Fatura Digital",
+    "baixarFatura": "Baixar",
+    "coordenadasBancarias": "Fatura Digital",
+    "baixarCoordenadas": "Baixar"
+  }
+}

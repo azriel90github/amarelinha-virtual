@@ -1,0 +1,149 @@
+{
+  "buttons": {
+    "menuButton": "Menu",
+    "cartButton": "Panier"
+  },
+
+  "modal": {
+    "modalContact": {
+      "title": "Nous contacter",
+      "numero": "Numéro",
+      "social": "Social",
+      "email": "Email"
+    },
+    "modalGallery": {
+      "title": "Galerie"
+    },
+    "modalLanguage": {
+      "umbundu": "Umbundu",
+      "kimbundo": "Kimbundu",
+      "portugues": "Portugais",
+      "ingles": "Anglais",
+      "frances": "Français",
+      "chines": "Chinois",
+      "russo": "Russe"
+
+    },
+    "modalNotification": {
+      "title": ""
+    },
+    "modalOrderDetail": {
+      "title": ""
+    },
+    "modalPaymentMethod": {
+      "title": ""
+    },
+    "modalProfile": {
+      "title": ""
+    },
+    "modalSearchBox": {
+      "h2": "Catégorie",
+      "title": "Choisir une catégorie",
+      "category1": "Menthe",
+      "category2": "Chocolat",
+      "category3": "Fraise",
+      "searchPlaceholder": "Rechercher...",
+      "noResults": "Aucun produit trouvé"
+    },
+    "Searchbox": "Tout"
+  },
+
+  "blogpage": {
+    "h2": "À propos de nous",
+    "par1": "Bonjour! Je suis Cunha Shombossi, l'esprit et le cœur derrière Geladaria Italala. Ma passion pour créer des saveurs uniques et offrir des moments sucrés aux gens a commencé il y a de nombreuses années, lorsque j'ai découvert la magie qu'une simple glace peut apporter à la journée de quelqu'un.",
+    "par2": "Chez Geladaria Italala, nous utilisons uniquement des ingrédients frais et de haute qualité. Toutes nos glaces sont préparées avec beaucoup de soin et d'amour pour garantir une explosion de saveurs à chaque bouchée. Nous valorisons le processus artisanal et chaque détail est pensé pour offrir la meilleure expérience à nos clients.",
+    "par3": "Chez Italala, vous trouverez une atmosphère familiale et décontractée, parfaite pour savourer une délicieuse glace en bonne compagnie. En plus de nos saveurs traditionnelles, nous proposons des options végétaliennes et sans lactose afin que tout le monde puisse profiter de cette expérience. Suivez-nous sur les réseaux sociaux pour rester informé de nos promotions et nouveautés. Venez nous rendre visite dès aujourd'hui ou passez votre commande ici !",
+    "h3": "Témoignages",
+    "dep1": "La meilleure glace que j'aie jamais goûtée ! Saveurs incroyables et texture parfaite. Je suis déjà un client fidèle.",
+    "dep2": "La meilleure glace que j'aie jamais goûtée ! Saveurs incroyables et texture parfaite. Je suis déjà un client fidèle.",
+    "dep3": "La meilleure glace que j'aie jamais goûtée ! Saveurs incroyables et texture parfaite. Je suis déjà un client fidèle.",
+    "dep4": "La meilleure glace que j'aie jamais goûtée ! Saveurs incroyables et texture parfaite. Je suis déjà un client fidèle."
+  },
+  "homepage": {
+    "h3modal": "Sélectionner une langue",
+    "gallery": "Galerie",
+    "description": "Faites votre commande à tout moment et de n'importe où!",
+    "buttonBlog": "Blog",
+    "buttonContact": "Appeler",
+    "buttonMenu": "Menu",
+    "buttonCart": "Panier",
+    "buttonLibrary": "Bibliothèque",
+    "terms": "En passant commande via itala virtual, vous acceptez automatiquement nos conditions d'utilisation et notre politique de confidentialité.",
+    "footer": "Programmé par Suélio Armando JS etXtreme Programming",
+    "programador": "Programmeur"
+  },
+
+  "cardMenu": {
+    "detalhesProduto": "Détails du Produit",
+    "colheres": "Cuillères",
+    "adicionarCarrinho": "Ajouter au Panier",
+    "removerCarrinho": "Retirer du Panier",
+    "adicionarSucesso": "Ajouté avec Succès",
+    "removerSucesso": "Supprimé avec Succès",
+    "descricao": "Description"
+  },
+
+  "modalQr": {
+    "botaoFechar": "Fermer",
+    "baixarQr": "Télécharger le code QR",
+    "copiarLink": "Copier le lien"
+  },
+
+  "orderpage": {
+    "h3menu": "Panier",
+    "h2order": "Détails de la commande",
+    "sabores": "Saveurs",
+    "pagamento": "Paiement",
+    "adicionar": "Ajouter des saveurs",
+    "remover": "Supprimer des saveurs",
+    "h2encomendar": "Commander Maintenant",
+    "h2selectMethod": "Sélectionner le mode de paiement",
+    "money": "Espèce",
+    "express": "Multicaixa Express",
+    "tpa": "TPA - Face-à-face",
+    "placeholderName": "Nom",
+    "placeholderNumber": "Numéro(+244)",
+    "placeholderPaymentMethod": "Mode de paiement",
+    "placeholderCityOrNeighborhood": "Ville ou Quartier",
+    "placeholderLandmark": "Point de repère",
+    "send": "Envoyer",
+    "reset": "Effacer",
+    "modalSend": "Message envoyée avec succès",
+    "modalSendh3": "Rappel important:",
+    "modalSendP1": "Si votre mode de paiement est Multicaixa Express ou Virement Bancaire, la commande sera livrée uniquement après l'envoi du reçu de paiement, qui doit être envoyé via le WhatsApp de la glacerie",
+    "modalSendButton2": "Envoyer via WhatsApp",
+    "modalSendButton3": "Choisir paiement à la livraison",
+    "validationAllFields": "Veuillez remplir tous les champs"
+  },
+
+  "fatura": {
+    "gps1": "Avenue Commandant Valódia, nº 69",
+    "gps2": "Place Kinaxixi - Luanda",
+    "gps3": "Angola",
+    "clienteh3": "Données du client",
+    "nome": "Nom : ",
+    "numero": "Numéro : ",
+    "bairro": "Ville ou Quartier : ",
+    "referencia": "Point de Référence : ",
+    "encomendah3": "Détails de la Commande",
+    "nomeEncomenda": "Nom",
+    "preco": "Prix",
+    "colheres": "Cuillères",
+    "total": "Total",
+    "resumoh3": "Résumé de la Commande",
+    "totalSabores": "Total des Saveurs",
+    "totalPagar": "Total à Payer",
+    "metodoPagamento": "Mode de Paiement",
+    "data": "Date",
+    "pedido": "Commande"
+  },
+
+  "biblioteca": {
+    "bibliotecah3": "Bibliothèque en ligne",
+    "faturaDigital": "Facture numérique",
+    "baixarFatura": "Télécharger",
+    "coordenadasBancarias": "Coordonnées bancaires",
+    "baixarCoordenadas": "Télécharger"
+  }
+
+}
