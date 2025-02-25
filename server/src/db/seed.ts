@@ -13,6 +13,20 @@ async function seed() {
 			description: "hambúrguer tuneza ( carne + ovo + bacon + queijo cheddar + batata palha + molho especial da casa )",
 			category: "Tuneza"
 		},
+		{
+			title: "Hambuguer tuneza simples de carne",
+			price: "40000", // Agora pode ser um number
+			heart: 2,
+			description: "hambúrguer tuneza ( carne + ovo + bacon + queijo cheddar + batata palha + molho especial da casa )",
+			category: "Tuneza"
+		},
+		{
+			title: "Hambuguer tuneza simples de carne",
+			price: "40000", // Agora pode ser um number
+			heart: 2,
+			description: "hambúrguer tuneza ( carne + ovo + bacon + queijo cheddar + batata palha + molho especial da casa )",
+			category: "Tuneza"
+		}
 	]);
 
 	/**
@@ -32,8 +46,6 @@ async function seed() {
 
 }
 
-seed().finally(() => { 
-	client.end();
-}); 
+seed().finally(() => client.end());
 
 
