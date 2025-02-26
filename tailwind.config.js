@@ -4,23 +4,23 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				colorFundo: "#64395C",
-				colorText1: "#38122F",
-				colorButton: "#99658F",
-				colorHover: "#462940",
-				buttonColor: "#38122F",
+				colorFundo: "#E6B31B",//
+				colorText1: "#806613",//
+				colorButton: "#5E4C11",//
+				colorHover: "#A08016",//
+				buttonColor: "#5E4C11",//
 				buttonColor3: "#5c1e4d",
-				buttonColor2: "#64395C",
-				headerColor: "#99658F",
+				buttonColor2: "#806613",
+				headerColor: "#A08016",//
 				headerColor2: "#99658f91",
-				searchColor: "#7C4A73",
-				searchColorInput: "#7c4a738c",
+				searchColor: "#C49A18",
+				searchColorInput: "#C49A18",
 				moneyColor: "green",
 				moneyColor1: "#22c55e",
 				colorRemove: "red",
 				colorRemove1: "#dc2626",
 				colorStar: "#d946ef",
-				colorInput: "#8C5B83",
+				colorInput: "#F7931B",//
 				colorExtra: "#955573",
 				jsColor: "#FFDF00",
 				goColor: "#007D9C",
@@ -36,7 +36,7 @@ export default {
 			},
 
 			backgroundImage: {
-				fundoHome: "url('/ice-cream 2.png')",
+				fundoHome: "url('/.png')",
 				fundoBg: "url('/bg.png')"
 			},
 

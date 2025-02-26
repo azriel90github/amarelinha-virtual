@@ -51,11 +51,11 @@ export function HomePage() {
 				<LanguageModal variant="default" />
 			</div>
 			
-			<div className="mainHome h-screen w-full flex items-center justify-center bg-fundoHome fundo bg-no-repeat bg-center">
+			<div className="mainHome h-screen w-full bg-fundoHome bg-no-repeat bg-center flex items-center justify-center ">
 				<div className="max-w-3xl w-full px-6 text-center space-y-10">
 					<div className="flex flex-col items-center gap-4">
-						<img className="w-64" src="/logo-geladaria.png" alt="logoItalala" />
-						<p className="text-zinc-300 text-2xl font-light">
+						<img className="w-52" src="/logo-amarelinha.png" alt="logoAmarelinha" />
+						<p className="text-colorButton text-2xl font-light">
 							{t('homepage.description')}
 						</p>
 					</div>
