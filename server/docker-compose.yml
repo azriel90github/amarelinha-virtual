@@ -4,7 +4,7 @@ services:
   pg:
     image: bitnami/postgresql:17.0.0
     ports:
-      - '5434:5434'
+      - '5433:5433'
     environment:
       - POSTGRES_USER=docker-amarelinha
       - POSTGRES_PASSWORD=dockeramarelinha
