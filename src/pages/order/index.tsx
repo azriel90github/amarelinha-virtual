@@ -296,7 +296,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
   return (
     <div className="max-w-6xl px-6 py-10 mx-auto bg-fundoHome bg-no-repeat bg-right">
-      <div className="border-2 mb-10 border-colorInput p-3 h-full rounded-3xl shadow-shape bg-searchColor text-buttonColor flex flex-wrap gap-3 items-center justify-between font-medium text-xl">
+      <div className="mb-11 p-4 h-full rounded-3xl shadow-shape bg-colorButton text-colorFundo flex flex-wrap gap-3 items-center justify-between font-medium text-xl">
         <div className="flex items-center">
           <p className="pl-3 text-2xl font-normal">{t('orderpage.h3menu')}</p>
         </div>
@@ -312,16 +312,16 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
       <form onSubmit={handleSubmit}>
         <main className="flex flex-wrap gap-16">
-          <div className="paymentMobile w-80 h-full bg-searchColor py-3.5 px-3.5 rounded-3xl">
+          <div className="paymentMobile w-80 h-full bg-colorButton py-3.5 px-3.5 rounded-3xl">
             <div className="flex flex-col gap-1.5">
-              <div className="bg-buttonColor2 text-lx items-center text-zinc-100 py-3 px-5 w-full rounded-2xl flex justify-between">
+              <div className="bg-buttonColor2 text-lx items-center text-colorFundo py-3 px-5 w-full rounded-2xl flex justify-between">
                 {t('orderpage.h2order')}
                 <Truck/>
               </div>
             </div>
 
             <p className="flex justify-between pt-5 px-3 text-xl">
-              <h3 className="text-buttonColor font-medium">{t('orderpage.sabores')}</h3>
+              <h3 className="text-colorFundo font-medium">{t('orderpage.sabores')}</h3>
               <input
                   type="text"
                   name="flavors"
@@ -333,7 +333,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </p>
 
             <p className="flex justify-between py-1.5 px-3 text-xl">
-              <h3 className="text-buttonColor font-medium">{t('orderpage.pagamento')}</h3>
+              <h3 className="text-colorFundo font-medium">{t('orderpage.pagamento')}</h3>
               <input
                 type="text"
                 name="payment"
@@ -347,14 +347,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div className="flex flex-col gap-3">
               <button type="button"
                 onClick={menuPage}
-                className="flex mt-6 transition duration-400 bg-buttonColor2 hover:bg-moneyColor text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
+                className="flex mt-6 transition duration-400 bg-buttonColor2 hover:bg-moneyColor text-colorFundo py-3 px-5 w-full rounded-2xl justify-between"
               >
                 {t('orderpage.adicionar')}
                 <ShoppingCart />
               </button>
               <button type="button"
                 onClick={menuPage}
-                className="flex transition duration-400 bg-buttonColor2 hover:bg-colorRemove text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
+                className="flex transition duration-400 bg-buttonColor2 hover:bg-colorRemove text-colorFundo py-3 px-5 w-full rounded-2xl justify-between"
               >
                 {t('orderpage.remover')}
                 <Trash2 />
@@ -363,7 +363,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           </div>
 
           <div className="flex-1">
-            <h1 className="pb-5 text-4xl flex items-center font-light text-zinc-300">
+            <h1 className="pb-5 text-4xl flex items-center font-light text-colorButton">
               {t('orderpage.h2encomendar')}
             </h1>
 
@@ -375,7 +375,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderName')}
-                    className="py-3 px-4 outline-none rounded-xl bg-searchColorInput text-colorText1 border-2 border-searchColor focus:border-2 focus:border-colorText1 placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor  placeholder:text-headerColor font-medium text-lx"
                   />
                   {/* Espaço fixo para mensagens de erro */}
                   <div className="ml-2 mb-0.5">
@@ -391,7 +391,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.number}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderNumber')}
-                    className="removeNumber py-3 px-4 outline-none rounded-xl bg-searchColorInput text-colorText1 border-2 border-searchColor focus:border-2 focus:border-colorText1 placeholder:text-headerColor font-medium text-lx"
+                    className="removeNumber py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
                   />
                   {/* Espaço fixo para mensagem de erro */}
                   <div className="ml-2 mb-0.5">
@@ -406,7 +406,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     placeholder={t('orderpage.placeholderPaymentMethod')}
                     type="text"
                     onClick={openPaymentMethodModal}
-                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl bg-searchColorInput text-buttonColor border-2 border-searchColor focus:border-2 placeholder:text-headerColor font-medium text-lx"
+                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
 
@@ -438,7 +438,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                               className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
                               onClick={() => handleSelectOption("Dinheiro em mão")}
                             >
-                              <p className="text-zinc-300">{t('orderpage.money')}</p>
+                              <p className="text-zinc-50">{t('orderpage.money')}</p>
                               <HandCoins/>
                             </button>
                             <button
@@ -446,7 +446,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                               className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
                               onClick={() => handleSelectOption("Multicaixa Express")}
                             >
-                              <p className="text-zinc-300">{t('orderpage.express')}</p>
+                              <p className="text-zinc-50">{t('orderpage.express')}</p>
                               <Landmark/>
                             </button>
                             <button
@@ -454,7 +454,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                               className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
                               onClick={() => handleSelectOption("Transfência Bancária")}
                             >
-                              <p className="text-zinc-300">{t('orderpage.tpa')}</p>
+                              <p className="text-zinc-50">{t('orderpage.tpa')}</p>
                               <CreditCard/>
                             </button>
                           </div>
@@ -468,7 +468,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.cityOrNeighborhood}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderCityOrNeighborhood')}
-                    className="py-3 px-4 outline-none rounded-xl bg-searchColorInput text-colorText1 border-2 border-searchColor focus:border-2 focus:border-colorText1 placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.cityOrNeighborhood && (
@@ -481,7 +481,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.landmark}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderLandmark')}
-                    className="py-3 px-4 outline-none rounded-xl bg-searchColorInput text-colorText1 border-2 border-searchColor focus:border-2 focus:border-colorText1 placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.landmark && (
@@ -492,7 +492,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
                 <div className="flex flex-col gap-3 w-72 py-5">
                 <button
-                  className="flex transition duration-400 bg-buttonColor hover:bg-moneyColor text-zinc-100 py-3 px-6 rounded-2xl justify-between"
+                  className="flex transition duration-400 bg-buttonColor hover:bg-moneyColor text-colorFundo hover:text-zinc-100 py-3 px-6 rounded-2xl justify-between"
                   type="submit"
                   onSubmit={handleSubmit} // Certifique-se de que o onClick está chamando handleSubmit
                 >
@@ -501,7 +501,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 </button>
 
                 <button
-                  className="flex transition duration-400 bg-buttonColor hover:bg-colorRemove text-zinc-100 py-3 px-6 rounded-2xl justify-between"
+                  className="flex transition duration-400 bg-buttonColor hover:bg-colorRemove text-colorFundo hover:text-zinc-100 py-3 px-6 rounded-2xl justify-between"
                   type="button"
                   onClick={() => {
                     setFormData({
