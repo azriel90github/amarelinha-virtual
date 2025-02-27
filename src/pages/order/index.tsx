@@ -375,12 +375,12 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderName')}
-                    className="py-3 px-4 outline-none rounded-xl bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor  placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor  placeholder:text-headerColor font-medium text-lx"
                   />
                   {/* Espaço fixo para mensagens de erro */}
                   <div className="ml-2 mb-0.5">
                     {formErrors.name && (
-                      <p className="text-red-500 text-sm">{formErrors.name}</p>
+                      <p className="text-errorColor text-sm">{formErrors.name}</p>
                     )}
                   </div>
 
@@ -391,12 +391,12 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.number}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderNumber')}
-                    className="removeNumber py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
+                    className="removeNumber py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor placeholder:text-headerColor font-medium text-lx"
                   />
                   {/* Espaço fixo para mensagem de erro */}
                   <div className="ml-2 mb-0.5">
                     {formErrors.number && (
-                      <p className="text-red-500 text-sm">{formErrors.number}</p>
+                      <p className="text-errorColor text-sm">{formErrors.number}</p>
                     )}
                   </div>
                   <input
@@ -406,7 +406,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     placeholder={t('orderpage.placeholderPaymentMethod')}
                     type="text"
                     onClick={openPaymentMethodModal}
-                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
+                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
 
@@ -420,12 +420,12 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                       {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
                       <div
                         onClick={() => setIsPaymentMethodModalOpen(false)}
-                        className="w-[640px] rounded-xl py-5 px-6 bg-colorFundo"
+                        className="w-[640px] rounded-xl py-5 px-6 bg-buttonColor"
                       >
                         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
                         <div
                           onClick={(e) => e.stopPropagation()}
-                          className="text-buttonColor font-medium"
+                          className="text-searchColor font-medium"
                         >
                           <div className="flex items-center justify-between text-xl ml-1">
                             {t('orderpage.h2selectMethod')}
@@ -435,26 +435,26 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                           <div className="flex flex-col py-3 mt-2 gap-3">
                             <button
                               type="button"
-                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                               onClick={() => handleSelectOption("Dinheiro em mão")}
                             >
-                              <p className="text-zinc-50">{t('orderpage.money')}</p>
+                              <p>{t('orderpage.money')}</p>
                               <HandCoins/>
                             </button>
                             <button
                               type="button"
-                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                               onClick={() => handleSelectOption("Multicaixa Express")}
                             >
-                              <p className="text-zinc-50">{t('orderpage.express')}</p>
+                              <p>{t('orderpage.express')}</p>
                               <Landmark/>
                             </button>
                             <button
                               type="button"
-                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+                              className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                               onClick={() => handleSelectOption("Transfência Bancária")}
                             >
-                              <p className="text-zinc-50">{t('orderpage.tpa')}</p>
+                              <p>{t('orderpage.tpa')}</p>
                               <CreditCard/>
                             </button>
                           </div>
@@ -468,11 +468,11 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.cityOrNeighborhood}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderCityOrNeighborhood')}
-                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.cityOrNeighborhood && (
-                    <p className="text-red-500 text-sm">{formErrors.cityOrNeighborhood}</p>
+                    <p className="text-errorColor text-sm">{formErrors.cityOrNeighborhood}</p>
                   )}
                   </div>
                   <input
@@ -481,11 +481,11 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.landmark}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderLandmark')}
-                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-headerColor placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor placeholder:text-headerColor font-medium text-lx"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.landmark && (
-                    <p className="text-red-500 text-sm">{formErrors.landmark}</p>
+                    <p className="text-errorColor text-sm">{formErrors.landmark}</p>
                   )}
                   </div>
                 </div>

@@ -66,73 +66,73 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 					{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 					<div
 						onClick={() => setIsLanguageModalOpen(false)}
-						className="w-[640px] rounded-xl py-5 px-6 bg-colorFundo"
+						className="w-[640px] rounded-xl py-5 px-6 bg-colorButton"
 					>
 						{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 						<div
 							onClick={(e) => e.stopPropagation()}
-							className="text-buttonColor font-normal"
+							className="text-searchColor font-normal"
 						>
 							<div className="flex items-center justify-between text-2xl ml-1">
 							{t('homepage.h3modal')}
 								<X onClick={closeLanguageModal} className="cursor-pointer" />
 							</div>
 
-							<div className="flex flex-col py-3 mt-2 gap-3">
+							<div className="flex text-searchColor flex-col py-3 mt-2 gap-3">
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Umbundu", "umb")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.umbundu')}</p>
+									<p>{t('modal.modalLanguage.umbundu')}</p>
 									<img className="w-10" src="/languages/angola.png" alt="emojiAngola" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Kimbundu", "kmb")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.kimbundo')}</p>
+									<p>{t('modal.modalLanguage.kimbundo')}</p>
 									<img className="w-10" src="/languages/angola.png" alt="emojiAngola" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Lingala", "ln")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.lingala')}</p>
+									<p>{t('modal.modalLanguage.lingala')}</p>
 									<img className="w-10" src="/languages/angola.png" alt="emojiAngola" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Português", "pt")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.portugues')}</p>
+									<p>{t('modal.modalLanguage.portugues')}</p>
 									<img className="w-10" src="/languages/portugal.png" alt="emojiPortugal" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Inglês", "en")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.ingles')}</p>
+									<p>{t('modal.modalLanguage.ingles')}</p>
 									<img className="w-10" src="/languages/eua.png" alt="emojiEUA" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Espanhol", "es")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.espanhol')}</p>
+									<p>{t('modal.modalLanguage.espanhol')}</p>
 									<img className="w-10" src="/languages/espanha1.png" alt="emojiFrança" />
 								</button>
 								<button
 									type="button"
-									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
 									onClick={() => handleSelectOption("Francês", "fr")}
 								>
-									<p className="text-zinc-300">{t('modal.modalLanguage.frances')}</p>
+									<p>{t('modal.modalLanguage.frances')}</p>
 									<img className="w-10" src="/languages/franca.png" alt="emojiFrança" />
 								</button>
 								{/**

@@ -16,7 +16,7 @@ export default {
 				searchColor: "#C49A18",
 				searchColorInput: "#C49A18",
 				moneyColor: "green",
-				moneyColor1: "#22c55e",
+				moneyColor1: "#40FA48",
 				colorRemove: "red",
 				colorRemove1: "#dc2626",
 				colorStar: "#d946ef",
@@ -25,6 +25,7 @@ export default {
 				jsColor: "#FFDF00",
 				goColor: "#007D9C",
 				whatsappColor: "#25D366",
+				errorColor: "#F11C11"
 			},
 
 			fontFamily: {
