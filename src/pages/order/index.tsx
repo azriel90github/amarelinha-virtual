@@ -294,7 +294,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   
 
   return (
-    <div className="max-w-6xl px-6 py-10 mx-auto bg-fundoHome bg-no-repeat bg-right">
+    <div className="max-w-6xl px-6 py-10 mx-auto bg-fundoHome bg-no-repeat bg-right-top">
       <div className="mb-11 p-4 h-full rounded-3xl shadow-shape bg-buttonColor2 text-colorFundo flex flex-wrap gap-3 items-center justify-between font-medium text-xl">
         <div className="flex items-center">
           <p className="pl-3 text-2xl font-normal">{t('orderpage.h3menu')}</p>
@@ -455,7 +455,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                               className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                               onClick={() => handleSelectOption("Transfência Bancária")}
                             >
-                              <p>{t('orderpage.tpa')}</p>1
+                              <p>{t('orderpage.tpa')}</p>
                               <CreditCard/>
                             </button>
                           </div>

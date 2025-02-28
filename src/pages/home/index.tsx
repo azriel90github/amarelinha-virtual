@@ -55,7 +55,7 @@ export function HomePage() {
 				<div className="max-w-3xl w-full px-6 text-center space-y-10">
 					<div className="flex flex-col items-center gap-4">
 						<img className="w-44" src="/logo-amarelinha.png" alt="logoAmarelinha" />
-						<p className="text-colorButton text-2xl font-light">
+						<p className="text-zinc-50 text-2xl font-light">
 							{t('homepage.description')}
 						</p>
 					</div>
@@ -71,7 +71,6 @@ export function HomePage() {
 						 */}
 						<div className="flex justify-center flex-wrap gap-4 w-full">
 							
-
 							<ContactModal />
 
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
