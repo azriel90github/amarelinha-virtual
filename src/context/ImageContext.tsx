@@ -13,9 +13,9 @@ const ImageContext = createContext<ImageContextProps | undefined>(undefined);
 // Componente Provider para o contexto de imagens
 export const ImageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const images: { [key: string]: string } = {
-    "Hamburguer tuneza simples de carne": '/menu/ice-cream 1.png',
-    "Menu papa tudo": '/menu/ice-cream 1.png',
-    "Fahitas de carne": '/menu/ice-cream 1.png'
+    "Hamburguer tuneza simples de carne": '/menu/burguer_1.png',
+    "Menu papa tudo": '/menu/burguer_1.png',
+    "Fahitas de carne": '/menu/burguer_1.png'
     // Adicione outras associações título -> imagem conforme necessário
   };
 
