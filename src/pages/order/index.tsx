@@ -347,14 +347,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div className="flex flex-col gap-3">
               <button type="button"
                 onClick={menuPage}
-                className="flex mt-6 transition duration-400 bg-buttonColor2 hover:bg-moneyColor text-colorFundo py-3 px-5 w-full rounded-2xl justify-between"
+                className="flex mt-6 transition duration-400 bg-buttonColor2 hover:bg-moneyColor text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
               >
                 {t('orderpage.adicionar')}
                 <ShoppingCart />
               </button>
               <button type="button"
                 onClick={menuPage}
-                className="flex transition duration-400 bg-buttonColor2 hover:bg-colorRemove text-colorFundo py-3 px-5 w-full rounded-2xl justify-between"
+                className="flex transition duration-400 bg-buttonColor2 hover:bg-colorRemove text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
               >
                 {t('orderpage.remover')}
                 <Trash2 />
@@ -425,7 +425,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
                         <div
                           onClick={(e) => e.stopPropagation()}
-                          className="text-searchColor font-medium"
+                          className="text-colorFundo font-medium"
                         >
                           <div className="flex items-center justify-between text-xl ml-1">
                             {t('orderpage.h2selectMethod')}
@@ -492,7 +492,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
                 <div className="flex flex-col gap-3 w-72 py-5">
                 <button
-                  className="flex transition duration-400 bg-buttonColor hover:bg-moneyColor text-colorFundo hover:text-zinc-100 py-3 px-6 rounded-2xl justify-between"
+                  className="flex transition duration-400 bg-buttonColor hover:bg-moneyColor text-zinc-100 hover:text-zinc-50 py-3 px-6 rounded-2xl justify-between"
                   type="submit"
                   onSubmit={handleSubmit} // Certifique-se de que o onClick está chamando handleSubmit
                 >
@@ -501,7 +501,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 </button>
 
                 <button
-                  className="flex transition duration-400 bg-buttonColor hover:bg-colorRemove text-colorFundo hover:text-zinc-100 py-3 px-6 rounded-2xl justify-between"
+                  className="flex transition duration-400 bg-buttonColor hover:bg-colorRemove text-zinc-100 hover:text-zinc-50 py-3 px-6 rounded-2xl justify-between"
                   type="button"
                   onClick={() => {
                     setFormData({

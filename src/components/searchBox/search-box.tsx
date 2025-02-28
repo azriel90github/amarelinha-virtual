@@ -68,9 +68,9 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
       {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-[640px] rounded-xl py-5 px-6 bg-searchColorInput"
+        className="w-[640px] rounded-xl py-5 px-6 bg-buttonColor"
       >
-      <div className="text-buttonColor font-medium">
+      <div className="text-colorFundo font-medium">
         {/* Título do modal */}
         <div className="flex items-center justify-between text-xl ml-1">
           {t('modal.modalSearchBox.title')}
@@ -86,7 +86,7 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
             placeholder={t('modal.modalSearchBox.searchPlaceholder')}
             value={searchQuery} // Valor da pesquisa
             onChange={(e) => setSearchQuery(e.target.value)} // Atualiza a pesquisa
-            className="placeholder:text-buttonColor ring-2 ring-buttonColor placeholder:font-normal w-full py-3 pl-5 pr-12 outline-none rounded-xl transition duration-400 bg-searchColorInput text-zinc-400 focus:ring-2 focus:ring-moneyColor1"
+            className="placeholder:text-buttonColor ring-2 ring-colorFundo placeholder:font-normal w-full py-3 pl-5 pr-12 outline-none rounded-xl transition duration-400 bg-buttonColor2 text-zinc-50 focus:ring-2 focus:ring-moneyColor1"
             onFocus={() => setIsFocused(true)} // Atualiza estado ao focar
             onBlur={() => setIsFocused(false)} // Atualiza estado ao desfocar
           />
@@ -94,7 +94,7 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
           {/* Ícone de busca */}
           <div
             className={`absolute right-5 top-1/2 transform -translate-y-1/2 text-text-buttonColor ${
-              isFocused ? 'text-purple-500' : 'text-moneyColor1'
+              isFocused ? 'text-fuchsia-400' : 'text-moneyColor1'
             }`}
           >
             <Search />
@@ -109,16 +109,16 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
               <button
                 key={category}
                 type="button"
-                className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+                className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                 onClick={() => handleSelectCategory(category)}
               >
-                <p className="text-zinc-300">{category}</p>
+                <p className="">{category}</p>
                 <Logs />
               </button>
             ))
           ) : (
             // Exibe a mensagem de nenhum produto encontrado
-            <p className="text-zinc-300 text-center mt-4">
+            <p className="text-zinc-50 text-center mt-4">
               {t('modal.modalSearchBox.noResults')}
             </p>
           )}

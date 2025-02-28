@@ -62,11 +62,11 @@ export function MenuPage() {
 	return (
 		<div className="mx-auto space-y-9 bg-fundoHome bg-no-repeat bg-top bg-fixed">
 			<div
-				className={`border-b-2 border-colorInput h-20 shadow-shape bg-colorButton text-searchColorInput flex flex-wrap items-center justify-around font-medium text-xl ${
+				className={`border-b-2 border-colorInput h-20 shadow-shape bg-colorButton flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
 				}`}
 			>
-				<div className="flex items-center">
+				<div className="flex text-colorFundo items-center">
 					<button type="button" onClick={HomePage} className="flex gap-2">
 						{" "}
 						{/* Clicar na seta da página menu e levar para o inicio*/}
@@ -84,7 +84,6 @@ export function MenuPage() {
 				{/** <ContactAndLanguage /> */}
 				<LanguageModal variant="outlined" />
 				<Searchbox onCategorySelect={setSelectedCategory} />
-				
 			</div>
 			{/* Renderização dos cards */}
 			<div className="flex flex-wrap gap-5 justify-center pb-10">

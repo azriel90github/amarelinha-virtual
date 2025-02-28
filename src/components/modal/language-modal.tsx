@@ -19,14 +19,23 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 	const [selectedOption, setSelectedOption] = useState(""); // Estado para o valor selecionado
 	const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
 
-	// Função para fechar o modal e definir a opção selecionada
-	const handleSelectOption = (option: string, languageCode: string) => {
-		// i18n.changeLanguage(Languages); // Muda o idioma globalmente
-		setSelectedOption(option);
-		i18n.changeLanguage(languageCode); // Muda o idioma de toda a aplicação
-		setIsLanguageModalOpen(false);
-		enableScroll(); // Reativa a rolagem após a seleção
+	const languageMapping: Record<string, string> = {
+		umb: "umbundu",
+		kmb: "kimbundo",
+		ln: "lingala",
+		pt: "portugues",
+		en: "ingles",
+		es: "espanhol",
+		fr: "frances"
 	};
+	
+	const handleSelectOption = (option: string, languageCode: string) => {
+		setSelectedOption(languageMapping[languageCode] || option);
+		i18n.changeLanguage(languageCode);
+		setIsLanguageModalOpen(false);
+		enableScroll();
+	};
+	
 
 	function openLanguageModal() {
 		setIsLanguageModalOpen(true);
@@ -54,7 +63,7 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 				className={ buttonStyles[variant] }
 			>
 				{variant !== "iconOnly" && (
-					<span className="bg-colorFundo w-full py-2.5 flex items-center justify-center rounded-full">
+					<span className="bg-searchColor w-full py-2.5 flex items-center justify-center rounded-full">
 						{selectedOption ? t(`modal.modalLanguage.${selectedOption.toLowerCase()}`) : t('homepage.h3modal')}
 					</span>
 				)}
@@ -74,16 +83,16 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 						className="w-[640px] rounded-xl py-5 px-6 bg-colorButton"
 					>
 						{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-						<div
+						<div 
 							onClick={(e) => e.stopPropagation()}
-							className="text-searchColor font-normal"
+							className="text-colorFundo font-normal"
 						>
 							<div className="flex items-center justify-between text-2xl ml-1">
 							{t('homepage.h3modal')}
 								<X onClick={closeLanguageModal} className="cursor-pointer" />
 							</div>
 
-							<div className="flex text-searchColor flex-col py-3 mt-2 gap-3">
+							<div className="flex text-colorFundo flex-col py-3 mt-2 gap-3">
 								<button
 									type="button"
 									className="py-2 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
