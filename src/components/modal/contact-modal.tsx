@@ -56,12 +56,12 @@ export function ContactModal() {
 						{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 						<div
 							onClick={() => setIsContactModalOpen(false)}
-							className="w-[640px] rounded-xl py-5 px-6 bg-colorFundo"
+							className="w-[640px] rounded-xl py-5 px-6 bg-buttonColor"
 						>
 							{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 							<div
 								onClick={(e) => e.stopPropagation()}
-								className="text-buttonColor font-medium"
+								className="text-colorFundo font-medium"
 							>
 								<div className="flex items-center justify-between text-xl ml-1">
 									{t('modal.modalContact.title')}

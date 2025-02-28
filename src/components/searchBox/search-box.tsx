@@ -127,7 +127,6 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
     </div>
   </div>
 )}
-
-    </div>
+  </div>
   );
 }

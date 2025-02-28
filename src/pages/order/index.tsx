@@ -293,7 +293,6 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   };
   
 
-
   return (
     <div className="max-w-6xl px-6 py-10 mx-auto bg-fundoHome bg-no-repeat bg-right">
       <div className="mb-11 p-4 h-full rounded-3xl shadow-shape bg-colorButton text-colorFundo flex flex-wrap gap-3 items-center justify-between font-medium text-xl">
@@ -316,7 +315,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             <div className="flex flex-col gap-1.5">
               <div className="bg-buttonColor2 text-lx items-center text-colorFundo py-3 px-5 w-full rounded-2xl flex justify-between">
                 {t('orderpage.h2order')}
-                <Truck/>
+                <Truck className="text-zinc-50"/>
               </div>
             </div>
 
@@ -408,9 +407,11 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     onClick={openPaymentMethodModal}
                     className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor placeholder:text-headerColor font-medium text-lx"
                   />
+                  
                   <div className="ml-2 mb-0.5">
 
                   </div>
+
                   {isPaymentMethodModalOpen && (
                     //biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
                     <div
