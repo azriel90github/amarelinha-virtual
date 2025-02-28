@@ -302,7 +302,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
         <div className="flex items-center gap-4">
           <MenuButton />
-          <div className="w-px h-12 bg-buttonColor2">
+          <div className="w-px h-12 bg-colorFundo">
 						
 					</div>
           <LanguageModal variant="iconOnly" />

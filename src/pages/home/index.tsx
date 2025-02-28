@@ -54,7 +54,7 @@ export function HomePage() {
 			<div className="mainHome h-screen w-full bg-fundoHome bg-no-repeat bg-center flex items-center justify-center ">
 				<div className="max-w-3xl w-full px-6 text-center space-y-10">
 					<div className="flex flex-col items-center gap-4">
-						<img className="w-52" src="/logo-amarelinha.png" alt="logoAmarelinha" />
+						<img className="w-44" src="/logo-amarelinha.png" alt="logoAmarelinha" />
 						<p className="text-colorButton text-2xl font-light">
 							{t('homepage.description')}
 						</p>
@@ -77,7 +77,7 @@ export function HomePage() {
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
 								onClick={menuPage}
-								className="accountButton border-2 border-colorInput flex items-center justify-between w-80 bg-buttonColor px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 duration-400 border-colorInput flex items-center justify-between w-80 bg-buttonColor px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonMenu')}</p>
 								{/*

@@ -176,7 +176,7 @@ export function MenuPage() {
 				<Searchbox onCategorySelect={setSelectedCategory} />
 			</div>
 			<footer
-				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorInput bg-colorButton text-searchColor ${
+				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorInput bg-colorButton text-colorFundo ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>
