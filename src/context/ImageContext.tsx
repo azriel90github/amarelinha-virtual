@@ -15,16 +15,7 @@ export const ImageProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const images: { [key: string]: string } = {
     "Hamburguer tuneza simples de carne": '/menu/ice-cream 1.png',
     "Menu papa tudo": '/menu/ice-cream 1.png',
-    "Fahitas de carne": '/menu/ice-cream 1.png',
-    "Dubai": '/menu/ice-cream 1.png',
-    "Havai": '/menu/ice-cream 1.png',
-    "Rio de Janeiro": '/menu/ice-cream 1.png',
-    "Morro": '/menu/ice-cream 1.png',
-    "Angola": '/menu/ice-cream 1.png',
-    "Florianopólis": '/menu/ice-cream 1.png',
-    "Malanje": '/menu/ice-cream 1.png',
-    
-
+    "Fahitas de carne": '/menu/ice-cream 1.png'
     // Adicione outras associações título -> imagem conforme necessário
   };
 
