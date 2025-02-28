@@ -48,7 +48,7 @@ export function HomePage() {
 	return (
 		<div>
 			<div className="py-3 px-3 ml-1 mt-1">
-				<LanguageModal variant="default" />
+				<LanguageModal variant="outlined" />
 			</div>
 			
 			<div className="mainHome h-screen w-full bg-fundoHome bg-no-repeat bg-center flex items-center justify-center ">

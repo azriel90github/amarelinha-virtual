@@ -455,7 +455,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                               className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-colorHover bg-buttonColor2 flex items-center justify-between"
                               onClick={() => handleSelectOption("Transfência Bancária")}
                             >
-                              <p>{t('orderpage.tpa')}</p>
+                              <p>{t('orderpage.tpa')}</p>1
                               <CreditCard/>
                             </button>
                           </div>
