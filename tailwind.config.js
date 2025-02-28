@@ -37,8 +37,8 @@ export default {
 			},
 
 			backgroundImage: {
-				fundoHome: "url('/.png')",
-				fundoBg: "url('/bg.png')"
+				fundoHome: "url('/menu/burguer_2.png')",
+				//fundoBg: "url('/bg.png')"
 			},
 
 			screens: {
