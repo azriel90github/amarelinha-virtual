@@ -66,7 +66,7 @@ export function QrCodeButton({ productId, productUrl }: QrCodeButtonProps) {
       {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="hover:bg-colorHover bg-buttonColor transition duration-400 text-zinc-200 hover:text-zinc-200 rounded-2xl px-4 py-3.5"
+        className="bg-buttonColor hover:bg-colorHover transition duration-400 text-zinc-100 hover:text-zinc-200 rounded-2xl px-4 py-3.5"
       >
         <QrCode />
       </button>

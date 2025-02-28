@@ -81,7 +81,7 @@
 
   "cardMenu": {
     "detalhesProduto": "Detalhes Produto",
-    "colheres": "Colheres",
+    "colheres": "Quantidade",
     "adicionarCarrinho": "Adicionar no Carrinho",
     "removerCarrinho": "Remover do Carrinho",
     "adicionarSucesso": "Adicionado com sucesso",
@@ -98,7 +98,7 @@
   "orderpage": {
     "h3menu": "Carrinho de Compras",
     "h2order": "Detalhes Encomenda",
-    "sabores": "Sabores",
+    "sabores": "Categorias",
     "pagamento": "Pagamento",
     "adicionar": "Adicionar Sabores",
     "remover": "Remover Sabores",
@@ -134,7 +134,7 @@
     "encomendah3": "Detalhes Encomenda",
     "nomeEncomenda": "Nome",
     "preco": "Preço",
-    "colheres": "Colheres",
+    "colheres": "Quantidade",
     "total": "Total",
     "resumoh3": "Resumo da Encomenda",
     "totalSabores": "Total de Sabores",

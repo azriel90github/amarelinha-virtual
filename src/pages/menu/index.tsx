@@ -62,7 +62,7 @@ export function MenuPage() {
 	return (
 		<div className="mx-auto space-y-9 bg-fundoHome bg-no-repeat bg-top bg-fixed">
 			<div
-				className={`border-b-2 border-colorInput h-20 shadow-shape bg-searchColor text-buttonColor flex flex-wrap items-center justify-around font-medium text-xl ${
+				className={`border-b-2 border-colorInput h-20 shadow-shape bg-colorButton text-searchColorInput flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
 				}`}
 			>
@@ -91,11 +91,11 @@ export function MenuPage() {
 				{filteredProducts.map((product) => (
 					<div
 						key={product.id}
-						className="bg-searchColor rounded-3xl py-4 px-4 w-80 cardProd"
+						className="bg-buttonColor2 rounded-3xl py-4 px-4 w-80 cardProd"
 					>
 						{/* Informações do produto */}
 						<div className="flex justify-between py-2 px-3 font-normal">
-							<p className="text-buttonColor text-xl">{product.title}</p>
+							<p className="text-colorFundo text-xl">{product.title}</p>
 							<span className="">
 								<QrCodeButton productId={""} productUrl={""} />
 							</span>
@@ -120,7 +120,7 @@ export function MenuPage() {
 								onClick={() =>
 									navigate(`/product/${product.id}`, { state: { product } })
 								} // Passa os dados via state
-								className="text-buttonColor underline-none text-[19px] text-smal"
+								className="text-colorFundo underline-none text-[19px] text-smal"
 							>
 								{t('cardMenu.detalhesProduto')}
 							</button>
@@ -129,7 +129,7 @@ export function MenuPage() {
 						<div className="flex flex-col gap-3">
 							<button
 								type="button"
-								className="flex transition duration-400 bg-buttonColor2 hover:bg-colorHover text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
+								className="flex transition duration-400 bg-colorHover text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between"
 							>
 								<div>
 									{t("cardMenu.colheres")} <span className="ml-2">{counts[product.id]}</span>
@@ -145,7 +145,7 @@ export function MenuPage() {
 								className={`flex transition duration-400 hover:bg-moneyColor text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between ${
 									buttonColors[product.id] === "green"
 										? "bg-moneyColor"
-										: "bg-buttonColor2"
+										: "bg-buttonColor"
 								}`}
 								disabled={counts[product.id] === 0}
 							>
@@ -159,7 +159,7 @@ export function MenuPage() {
 								className={`flex transition duration-400 hover:bg-colorRemove text-zinc-100 py-3 px-5 w-full rounded-2xl justify-between ${
 									buttonColors[product.id] === "red"
 										? "bg-colorRemove"
-										: "bg-buttonColor2"
+										: "bg-buttonColor"
 								}`}
 								disabled={counts[product.id] === 0} // Botão desativado se não houver colheres
 							>
@@ -177,7 +177,7 @@ export function MenuPage() {
 				<Searchbox onCategorySelect={setSelectedCategory} />
 			</div>
 			<footer
-				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorInput bg-searchColor ${
+				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorInput bg-colorButton text-searchColor ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>
@@ -185,7 +185,7 @@ export function MenuPage() {
 					<button
 						type="button"
 						onClick={HomePage}
-						className="flex gap-2 text-buttonColor"
+						className="flex gap-2"
 					>
 						{" "}
 						{/* Clicar na seta da página menu e levar para o inicio*/}

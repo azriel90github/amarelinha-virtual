@@ -40,7 +40,7 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 
 	const buttonStyles = {
 		default: "text-buttonColor font-medium text-lg bg-searchColor w-80 flex justify-between font-medium flex items-center gap-2 px-2.5 py-2.5 rounded-full",
-		outlined: "text-buttonColor font-medium text-lg bg-searchColor w-96 flex justify-between font-medium flex items-center gap-2 px-2.5 py-2.5 rounded-full",
+		outlined: "text-buttonColor font-medium text-lg bg-buttonColor2 w-96 flex justify-between font-medium flex items-center gap-2 px-2.5 py-2.5 rounded-full",
 		filled: "",
 		iconOnly: "",
   };
@@ -53,8 +53,13 @@ export function LanguageModal({ variant = "default" }: { variant?: Variant }) {
 				type="button"
 				className={ buttonStyles[variant] }
 			>
-				{variant !== "iconOnly" && <span className="bg-colorFundo w-full py-2.5 flex items-center justify-center rounded-full">{t('homepage.h3modal')}</span>}
-				<Languages className="size-7 mr-3 ml-2" />
+				{variant !== "iconOnly" && (
+					<span className="bg-colorFundo w-full py-2.5 flex items-center justify-center rounded-full">
+						{selectedOption ? t(`modal.modalLanguage.${selectedOption.toLowerCase()}`) : t('homepage.h3modal')}
+					</span>
+				)}
+
+				<Languages className="text-colorFundo size-7 mr-3 ml-2" />
 			</button>
 
 			{isLanguageModalOpen && (

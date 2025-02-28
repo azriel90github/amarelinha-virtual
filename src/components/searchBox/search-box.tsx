@@ -43,13 +43,12 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
     closeSearchBoxModal();
   };
 
-
   return (
     <div className="flex justify-center cursor-pointer">
-      <div className="flex gap-2 items-center bg-searchColor text-buttonColor p-2.5 rounded-full w-96 justify-between font-medium text-lg">
+      <div className="flex gap-2 items-center bg-buttonColor2 text-buttonColor p-2.5 rounded-full w-96 justify-between font-medium text-lg">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 				<div
-          className="bg-colorFundo w-full flex items-center justify-between rounded-full"
+          className="bg-searchColorInput w-full flex items-center justify-between rounded-full"
           onClick={openSearchBoxModal}
         >
           <div className="w-full py-2.5 px-6 flex items-center justify-between">
@@ -69,7 +68,7 @@ export function Searchbox({ onCategorySelect }: SearchboxProps) {
       {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-[640px] rounded-xl py-5 px-6 bg-colorFundo"
+        className="w-[640px] rounded-xl py-5 px-6 bg-searchColorInput"
       >
       <div className="text-buttonColor font-medium">
         {/* Título do modal */}
