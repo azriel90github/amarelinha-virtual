@@ -55,7 +55,7 @@ export function HomePage() {
 				<div className="max-w-3xl w-full px-6 text-center space-y-10">
 					<div className="flex flex-col items-center gap-4">
 						<img className="w-44" src="/logo-amarelinha.png" alt="logoAmarelinha" />
-						<p className="text-zinc-50 text-2xl font-light">
+						<p className="text-buttonColor text-2xl font-normal">
 							{t('homepage.description')}
 						</p>
 					</div>
@@ -76,7 +76,7 @@ export function HomePage() {
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
 								onClick={menuPage}
-								className="accountButton border-2 duration-400 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 duration-400 border-buttonColor flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonMenu')}</p>
 								{/*
@@ -88,14 +88,14 @@ export function HomePage() {
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
 								onClick={orderPage}
-								className="accountButton border-2 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 border-buttonColor flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonCart')}</p>
 								<ShoppingCart className="size-6" />
 							</button>
 							<button type="button"
 								onClick={LibraryPage}
-								className="accountButton border-2 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 border-buttonColor flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonLibrary')}</p>
 								<Library className="size-6" />
@@ -112,7 +112,7 @@ export function HomePage() {
 							
 						</div>
 					</div>
-					<p className="text-lg text-colorText1 font-normal">
+					<p className="text-lg text-colorButton font-normal">
 						{t('homepage.terms')}
 					</p>
 				</div>

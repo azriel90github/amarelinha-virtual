@@ -62,7 +62,7 @@ export function MenuPage() {
 	return (
 		<div className="mx-auto space-y-9 bg-fundoHome bg-no-repeat bg-top bg-fixed">
 			<div
-				className={`border-b-2 border-colorInput h-20 shadow-shape bg-buttonColor2 flex flex-wrap items-center justify-around font-medium text-xl ${
+				className={`border-b-2 border-colorButton h-20 shadow-shape bg-buttonColor2 flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
 				}`}
 			>
@@ -176,7 +176,7 @@ export function MenuPage() {
 				<Searchbox onCategorySelect={setSelectedCategory} />
 			</div>
 			<footer
-				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorInput bg-buttonColor2 text-colorFundo ${
+				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 font-medium text-xl border-colorButton bg-buttonColor2 text-colorFundo ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>

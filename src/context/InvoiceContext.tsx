@@ -6,7 +6,7 @@ import {
   Text,
   View,
   StyleSheet,
-  Font,
+
   Image,
   pdf,
   //Link,
@@ -15,13 +15,7 @@ import { useCart, type CartItem } from "./CartContext.tsx";
 import { useTranslation } from "react-i18next";
 //import Geolocation from '@react-native-community/geolocation';
 
-// Registrar fonte personalizada (opcional)
-Font.register({
-  family: "Roboto",
-  fonts: [
-    { src: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" },
-  ],
-});
+
 
 // Definir uma interface para os dados da encomenda
 interface FormData {
@@ -48,7 +42,7 @@ const InvoiceContext = createContext<InvoiceContextProps | undefined>(undefined)
 const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
-    backgroundColor: "#64395C",
+    backgroundColor: "#C49A18",
     padding: 20,
   },
   backgroundImage: {
@@ -261,7 +255,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
               <View style={styles.header}>
                 {/* Logo */}
                 <View>
-                  <Image style={styles.logo} src="/logo-geladaria.png" />
+                  <Image style={styles.logo} src="/logo-amarelinha.png" />
                   <Text style={styles.tableHeader}>{t('homepage.description')}</Text>
                 </View>
                 {/* Endereço */}
