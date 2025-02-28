@@ -56,7 +56,7 @@ export function ContactModal() {
 						{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 						<div
 							onClick={() => setIsContactModalOpen(false)}
-							className="w-[640px] rounded-xl py-5 px-6 bg-buttonColor"
+							className="w-[640px] rounded-xl py-5 px-6 bg-buttonColor2"
 						>
 							{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 							<div
@@ -72,24 +72,24 @@ export function ContactModal() {
 								<h3 className="flex mx-2 text-lx">{t('modal.modalContact.numero')}</h3>
                 <button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-										<p className="text-zinc-300">Africel - 959 261 926</p>
+										<p className="text-zinc-50">Africel - 959 261 926</p>
                     <Headset />
 									</button>
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-										<p className="text-zinc-300">Unitel - 929 261 926</p>
+										<p className="text-zinc-50">Unitel - 929 261 926</p>
                     <Headset />
 									</button>
 									<h3 className="flex mx-2 text-lx">{t('modal.modalContact.social')}</h3>
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition text-zinc-300 duration-400 hover:text-zinc-300 hover:bg-[#338C38] bg-[#2F7C38] flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition text-zinc-300 duration-400 hover:text-zinc-50 hover:bg-[#338C38] bg-[#2F7C38] flex items-center justify-between"
 										onClick={() => {
 											const phoneNumber = "932101903"; // Substitua pelo número desejado
 											const message = encodeURIComponent("Olá! Estou entrando em contato...");
@@ -99,41 +99,41 @@ export function ContactModal() {
 											window.location.assign(whatsappUri);
 										}}
 									>
-                    <p className="text-zinc-300">WhatsApp</p>
+                    <p>WhatsApp</p>
                     <MessageCircle />
 									</button>
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-										<p className="text-zinc-300">Instagram</p>
+										<p className="text-zinc-50">Instagram</p>
                     <Instagram />
 									</button>
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-                    <p className="text-zinc-300">Facebook</p>
+                    <p className="text-zinc-50">Facebook</p>
                     <Facebook />
 									</button>
 									<h3 className="flex mx-2 text-lx">{t('modal.modalContact.email')}</h3>
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-                    <p className="text-zinc-300">azrielgithub@gmail.com</p>
+                    <p className="text-zinc-50">azrielgithub@gmail.com</p>
                     <Mail />
 									</button>
 
 									<button
 										type="button"
-										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-300 hover:bg-buttonColor bg-searchColorInput flex items-center justify-between"
+										className="py-3 px-5 outline-none rounded-xl transition duration-400 hover:text-zinc-50 hover:bg-buttonColor bg-colorHover flex items-center justify-between"
 										onClick={() => handleSelectOption("")}
 									>
-                    <p className="text-zinc-300">azrielmoreira@gmail.com</p>
+                    <p className="text-zinc-50">azrielmoreira@gmail.com</p>
                     <Mail />
 									</button>
 								</div>
