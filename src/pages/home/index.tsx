@@ -69,14 +69,14 @@ export function HomePage() {
 								<Rss className="size-6" />
 							</button>
 						 */}
-						<div className="flex justify-center flex-wrap gap-4 w-full">
+						<div className="flex justify-center flex-wrap gap-3.5 w-full">
 							
 							<ContactModal />
 
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
 								onClick={menuPage}
-								className="accountButton border-2 duration-400 border-colorInput flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 duration-400 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonMenu')}</p>
 								{/*
@@ -88,14 +88,14 @@ export function HomePage() {
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
 								onClick={orderPage}
-								className="accountButton border-2 border-colorInput flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonCart')}</p>
 								<ShoppingCart className="size-6" />
 							</button>
 							<button type="button"
 								onClick={LibraryPage}
-								className="accountButton border-2 border-colorInput flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
+								className="accountButton border-2 border-colorFundo flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
 								<p className="text-1xl font-normal">{t('homepage.buttonLibrary')}</p>
 								<Library className="size-6" />

@@ -529,7 +529,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
       {showSuccessModal && (
         <div className="fixed inset-0 flex items-center justify-center p-4 bg-black/60 bg-opacity-50">
-          <div className="w-[640px] rounded-xl py-6 px-6 bg-colorFundo">
+          <div className="w-[640px] rounded-xl py-6 px-6 bg-colorButton">
             <div className="items-center flex justify-between">
               <p className="text-moneyColor1 px-1 text-xl font-normal">{t('orderpage.modalSend')}</p>
               {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
@@ -539,8 +539,8 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
               </button>
             </div>
             <div className="py-3">
-              <h3 className="text-buttonColor px-1 font-semibold text-[19px] pb-1.5">{t('orderpage.modalSendh3')}</h3>
-              <p className="text-zinc-300 pb-3 px-1 py-1 flex-1">{t('orderpage.modalSendP1')}</p>
+              <h3 className="text-colorFundo px-1 font-semibold text-[19px] pb-1.5">{t('orderpage.modalSendh3')}</h3>
+              <p className="text-zinc-200 pb-3 px-1 py-1 flex-1">{t('orderpage.modalSendP1')}</p>
             </div>
             <div className="items-center gap-3 flex flex-wrap">
               <button 
