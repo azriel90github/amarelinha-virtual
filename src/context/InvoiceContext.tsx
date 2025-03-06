@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     position: "absolute",
-    top: 0,
+    top: 5,
     right: 5,
-    width: 200, // Ajuste o tamanho da imagem
+    width: 90, // Ajuste o tamanho da imagem
     height: "auto", // Mantém a proporção
   },
 
@@ -62,8 +62,7 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 120,
-    height: 65,
+    width: 90,
     paddingBottom: 10,
   },
 
@@ -74,13 +73,13 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
   addressp: {
-    color: "#f3f4f6",
+    color: "#5E4C11",
     fontSize: 11,
     lineHeight: 1.5,
   },
 
   sectionTitle: {
-    color: "#3D1A36",
+    color: "#5E4C11",
     fontSize: 18,
     marginBottom: 12,
   },
@@ -120,7 +119,7 @@ const styles = StyleSheet.create({
   tableHeader: {
     fontSize: 13,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#5E4C11',
   },
 
   tableCell: {
@@ -248,7 +247,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           <Page size="A4" style={styles.page} key={pageIndex}>
             {/* Imagem de fundo */}
-            <Image style={styles.backgroundImage} src="/ice-cream 2.png" />
+            <Image style={styles.backgroundImage} src="/menu/burguer_1.png" />
 
             {/* Cabeçalho */}
             {pageIndex === 0 && (
