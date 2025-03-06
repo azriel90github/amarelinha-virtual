@@ -42,7 +42,7 @@ const InvoiceContext = createContext<InvoiceContextProps | undefined>(undefined)
 const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
-    backgroundColor: "#C49A18",
+    backgroundColor: "#806613",
     padding: 20,
   },
   backgroundImage: {
@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
   addressp: {
-    color: "#5E4C11",
+    color: "#E6B31B",
     fontSize: 11,
     lineHeight: 1.5,
   },
 
   sectionTitle: {
-    color: "#5E4C11",
+    color: "#E6B31B",
     fontSize: 18,
     marginBottom: 12,
   },
