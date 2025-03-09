@@ -101,7 +101,7 @@ export function MenuPage() {
 						</div>
 						<div className="py-3">
 							<img
-								className="mx-auto w-36 h-48 rounded-full"
+								className="mx-auto w-44 h-40 rounded-full"
 								src={getImageByTitle(product.title)} // Usando o título do produto
 								alt={`Product ${product.title}`}
 							/>
