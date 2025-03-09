@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    color: "#5E4C11",
+    color: "#E6B31B",
     fontSize: 18,
     marginBottom: 12,
   },
@@ -117,6 +117,12 @@ const styles = StyleSheet.create({
   },
 
   tableHeader: {
+    fontSize: 13,
+    fontWeight: 'extrabold',
+    color: '#5E4C11',
+  },
+
+  tableHeader1: {
     fontSize: 13,
     fontWeight: 'extrabold',
     color: 'white',
@@ -271,7 +277,12 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
               <View style={styles.dataBox}>
 
                 <Text style={styles.sectionTitle}>{t('fatura.clienteh3')}</Text>
-                <Text style={styles.link}>{t('fatura.nome')}{formData.name}</Text>
+                <Text style={styles.link}>
+                  {t('fatura.nome')}
+                  <Text style={styles.link1}>
+                    {formData.name}
+                  </Text>
+                </Text>
                 <Text style={styles.link}>
                   {t('fatura.numero')}
                   <Text style={styles.link1}>
@@ -301,10 +312,10 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
               {/* Cabeçalho da Tabela */}
               <View style={styles.tableRow}>
-                <Text style={[styles.tableHeader, styles.column]}>{t('fatura.nomeEncomenda')}</Text>
-                <Text style={[styles.tableHeader, styles.column]}>{t('fatura.preco')}</Text>
-                <Text style={[styles.tableHeader, styles.column]}>{t('fatura.colheres')}</Text>
-                <Text style={[styles.tableHeader, styles.column]}>{t('fatura.total')}</Text>
+                <Text style={[styles.tableHeader1, styles.column]}>{t('fatura.nomeEncomenda')}</Text>
+                <Text style={[styles.tableHeader1, styles.column]}>{t('fatura.preco')}</Text>
+                <Text style={[styles.tableHeader1, styles.column]}>{t('fatura.colheres')}</Text>
+                <Text style={[styles.tableHeader1, styles.column]}>{t('fatura.total')}</Text>
               </View>
 
               {/* Separador */}
