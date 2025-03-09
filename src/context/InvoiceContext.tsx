@@ -6,7 +6,6 @@ import {
   Text,
   View,
   StyleSheet,
-
   Image,
   pdf,
   //Link,
