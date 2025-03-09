@@ -41,17 +41,18 @@ const InvoiceContext = createContext<InvoiceContextProps | undefined>(undefined)
 const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
-    backgroundColor: "#806613",
+    backgroundColor: "#C49A18",
     padding: 20,
   },
-  backgroundImage: {
+  /*
+    backgroundImage: {
     position: "absolute",
     top: 5,
     right: 5,
     width: 90, // Ajuste o tamanho da imagem
     height: "auto", // Mantém a proporção
   },
-
+  */
   header: {
     display: "flex",
     flexDirection: "row",
@@ -72,13 +73,13 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
   addressp: {
-    color: "#E6B31B",
+    color: "#5E4C11",
     fontSize: 11,
     lineHeight: 1.5,
   },
 
   sectionTitle: {
-    color: "#E6B31B",
+    color: "#5E4C11",
     fontSize: 18,
     marginBottom: 12,
   },
@@ -89,12 +90,12 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: "#f3f4f6",
+    color: "white",
     fontSize: 12,
   },
 
   dataBox1: {
-    backgroundColor: "#7C4A73",
+    backgroundColor: "#806613",
     padding: 16,
     marginTop: 16,
     borderRadius: 8,
@@ -102,9 +103,9 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle1: {
-    color: "#3D1A36", 
+    color: "#E6B31B", 
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'extrabold',
     marginBottom: 8,
   },
 
@@ -117,13 +118,13 @@ const styles = StyleSheet.create({
 
   tableHeader: {
     fontSize: 13,
-    fontWeight: 'bold',
-    color: '#5E4C11',
+    fontWeight: 'extrabold',
+    color: 'white',
   },
 
   tableCell: {
     fontSize: 13,
-    color: '#3D1A36',
+    color: '#E6B31B',
     flex: 1, // Flexível para ocupar o espaço
   },
 
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
   },
 
   separator: {
-    borderBottomColor: '#64395C',
+    borderBottomColor: '#C49A18',
     borderBottomWidth: 1,
     marginVertical: 6,
   },
@@ -151,7 +152,7 @@ const styles = StyleSheet.create({
     flexDirection: "row", // Alinha os itens em linha
     justifyContent: "space-between", // Distribui os itens com espaçamento uniforme
     alignItems: "center", // (Opcional) Alinha os itens verticalmente ao centro
-    backgroundColor: "#7C4A73",
+    backgroundColor: "#806613",
     borderRadius: 10,
     lineHeight: 1,
     padding: 15,
@@ -170,11 +171,11 @@ const styles = StyleSheet.create({
   },
 
   summaryText1: {
-    color: '#3D1A36',
+    color: '#E6B31B',
   },
 
   moneyColor: {
-    color: "#22c55e",
+    color: "#40FA48",
   },
 
   qrcod: {
@@ -188,7 +189,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    color: "#f3f4f6",
+    color: "#5E4C11",
     fontSize: 10,
     marginTop: 12,
     marginRight: 8,
@@ -196,13 +197,13 @@ const styles = StyleSheet.create({
   },
 
   link: {
-    color: "#f3f4f6",
+    color: "#5E4C11",
     textDecoration: "none", 
     fontSize: 12,
   },
   
   link1: {
-    color: "#1e90ff",
+    color: "white",
   },
 });
 
@@ -246,7 +247,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           <Page size="A4" style={styles.page} key={pageIndex}>
             {/* Imagem de fundo */}
-            <Image style={styles.backgroundImage} src="/menu/burguer_1.png" />
+            {/*<Image style={styles.backgroundImage} src="/menu/burguer_1.png" />*/}
 
             {/* Cabeçalho */}
             {pageIndex === 0 && (
@@ -270,7 +271,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
               <View style={styles.dataBox}>
 
                 <Text style={styles.sectionTitle}>{t('fatura.clienteh3')}</Text>
-                <Text style={styles.text}>{t('fatura.nome')}{formData.name}</Text>
+                <Text style={styles.link}>{t('fatura.nome')}{formData.name}</Text>
                 <Text style={styles.link}>
                   {t('fatura.numero')}
                   <Text style={styles.link1}>
