@@ -51,7 +51,7 @@ export function HomePage() {
 				<LanguageModal variant="outlined" />
 			</div>
 			
-			<div className="mainHome h-screen w-full bg-fundoHome bg-no-repeat bg-center flex items-center justify-center ">
+			<div className="mainHome h-screen w-full bg-fundoHome bg-no-repeat bg-center before:bg-black/50 flex items-center justify-center ">
 				<div className="max-w-3xl w-full px-6 text-center space-y-10">
 					<div className="flex flex-col items-center gap-4">
 						<img className="w-44" src="/logo-amarelinha.png" alt="logoAmarelinha" />

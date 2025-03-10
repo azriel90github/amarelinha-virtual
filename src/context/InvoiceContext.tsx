@@ -70,8 +70,11 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "flex-end", // Alinha todo o conteúdo à direita
     alignItems: "flex-end", // Ajusta alinhamento vertical se necessário
-    marginTop: 0,
+    marginTop: 0, // Ajustando para ter a mesma margem que a margem direita
+    position: "relative", // Permite reposicionar
+    top: -25, // Ajuste esse valor para subir a seção conforme necessário
   },
+
   addressp: {
     color: "#5E4C11",
     fontSize: 11,
@@ -79,6 +82,12 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
+    color: "#5E4C11",
+    fontSize: 18,
+    marginBottom: 12,
+  },
+
+  sectionTitle2: {
     color: "#E6B31B",
     fontSize: 18,
     marginBottom: 12,
@@ -341,7 +350,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
               <View style={{ flex: 1, justifyContent: 'flex-end' }}>
                 <View style={styles.summaryBox}>
                   <View style={styles.contentBox}>
-                    <Text style={styles.sectionTitle}>{t('fatura.resumoh3')}</Text>
+                    <Text style={styles.sectionTitle2}>{t('fatura.resumoh3')}</Text>
                     <Text style={styles.summaryText}>
                       {t('fatura.totalSabores')} : <Text style={styles.summaryText1}>{getUniqueFlavorsCount()}</Text>
                     </Text>
