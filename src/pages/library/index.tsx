@@ -44,7 +44,7 @@ export function LibraryPage() {
 	return (
 		<div>
 			<div
-				className={`border-b-2 border-colorInput h-20 shadow-shape bg-searchColor text-buttonColor flex flex-wrap items-center justify-around font-medium text-xl ${
+				className={`border-b-2 border-buttonColor h-20 shadow-shape bg-buttonColor2 text-colorFundo flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
 				}`}
 			>
@@ -110,13 +110,13 @@ export function LibraryPage() {
 			</div>
 			
 			<footer
-				className={`queryFooterBlog flex py-3 gap-3 items-center flex-wrap justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-colorInput bg-searchColor ${
+				className={`queryFooterBlog flex py-3 gap-3 items-center flex-wrap justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-buttonColor bg-buttonColor2 ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>
 
 				{/** <ProfileModal /> */}
-				<button type="button" className="flex items-center gap-3 text-buttonColor" onClick={homePage}>
+				<button type="button" className="flex items-center justify-between gap-3 text-colorFundo" onClick={homePage}>
 					<ArrowLeft className="size-6" />
 					<p className="text-2xl font-normal">
 						<House />
