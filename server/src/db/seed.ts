@@ -7,7 +7,7 @@ async function seed() {
 
 	await db.insert(goods).values([
 		{
-			title: "Hamburguer tuneza simples de carne",
+			title: "Hamburguer de carne",
 			price: "4000", // Agora pode ser um number
 			heart: 3,
 			description: "hambúrguer tuneza ( carne + ovo + bacon	+ queijo cheddar + batata palha	+ molho especial da casa )",
