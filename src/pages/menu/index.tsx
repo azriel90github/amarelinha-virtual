@@ -60,7 +60,7 @@ export function MenuPage() {
 	const { getImageByTitle } = useImage(); // Atualizado para o novo método
 
 	return (
-		<div className="mx-auto space-y-9 bg-fundoHome bg-no-repeat bg-top bg-fixed">
+		<div className="mx-auto space-y-9 bg-searchColorInput bg-fundoHome bg-no-repeat bg-top bg-fixed">
 			<div
 				className={`border-b-2 border-colorButton h-20 shadow-shape bg-buttonColor2 flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
