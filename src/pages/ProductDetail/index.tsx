@@ -37,7 +37,7 @@ export function ProductDetail() {
 		<div className="">
 			{/* Cabeçalho */}
 			<div
-				className={`border-b-2 border-colorInput h-20 shadow-shape bg-searchColor text-buttonColor flex flex-wrap items-center justify-around font-medium text-xl ${
+				className={`border-b-2 border-colorButton h-20 shadow-shape bg-buttonColor2 text-colorFundo flex flex-wrap items-center justify-around font-medium text-xl ${
 					isScrolled ? "-translate-y-10" : "translate-y-0"
 				}`}
 			>
@@ -102,7 +102,7 @@ export function ProductDetail() {
 								<h2 className="text-buttonColor text-[20px] font-medium">
 									{t("cardMenu.descricao")}{" "}
 								</h2>
-								<p className="text-xl w-96 text-zinc-200 mt-2">
+								<p className="text-xl w-96 text-buttonColor mt-2">
 									{product.description || "Descrição não disponível."}
 								</p>
 							</div>
@@ -110,7 +110,7 @@ export function ProductDetail() {
 								<div className="produtDetailMobileButton flex w-80 flex-col gap-3 mt-10">
 									<button
 										type="button"
-										className="flex transition duration-400 bg-buttonColor hover:bg-colorHover text-zinc-100 py-3 px-5 rounded-2xl justify-between"
+										className="flex transition duration-400 bg-colorHover text-zinc-100 py-3 px-5 rounded-2xl justify-between"
 									>
 										<div>
 										{t("cardMenu.colheres")}{" "}
@@ -127,7 +127,7 @@ export function ProductDetail() {
 										className={`flex transition duration-400 hover:bg-moneyColor text-zinc-100 py-3 px-5 rounded-2xl justify-between ${
 											buttonColors[product.id] === "green"
 												? "bg-moneyColor"
-												: "bg-searchColor"
+												: "bg-buttonColor2"
 										}`}
 										disabled={counts[product.id] === 0}
 									>
@@ -141,7 +141,7 @@ export function ProductDetail() {
 										className={`flex transition duration-400 hover:bg-colorRemove text-zinc-100 py-3 px-5 rounded-2xl justify-between ${
 											buttonColors[product.id] === "red"
 												? "bg-colorRemove"
-												: "bg-searchColor"
+												: "bg-buttonColor2"
 										}`}
 										disabled={counts[product.id] === 0}
 									>
@@ -160,7 +160,7 @@ export function ProductDetail() {
 
 			{/* Rodapé */}
 			<footer
-				className={`footerMenu flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-colorInput bg-searchColor ${
+				className={`footerMenu font-medium text-xl flex flex-wrap h-20 items-center justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-buttonColor bg-buttonColor2 ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>
