@@ -44,15 +44,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#C49A18",
     padding: 20,
   },
-  /*
+
     backgroundImage: {
     position: "absolute",
-    top: 5,
-    right: 5,
-    width: 90, // Ajuste o tamanho da imagem
+    top: 195, // Ajuste conforme necessário
+    right: 25,
+    width: 120, // Ajuste o tamanho da imagem
     height: "auto", // Mantém a proporção
   },
-  */
+
   header: {
     display: "flex",
     flexDirection: "row",
@@ -262,7 +262,7 @@ export const InvoiceProvider: React.FC<{ children: React.ReactNode }> = ({ child
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           <Page size="A4" style={styles.page} key={pageIndex}>
             {/* Imagem de fundo */}
-            {/*<Image style={styles.backgroundImage} src="/menu/burguer_1.png" />*/}
+            <Image style={styles.backgroundImage} src="/menu/burguer_11.png" />
 
             {/* Cabeçalho */}
             {pageIndex === 0 && (

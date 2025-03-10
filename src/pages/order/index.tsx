@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CreditCard, HandCoins, Landmark, MailPlus, MessageCircle, PackageCheck, Truck, X } from "lucide-react";
+import { CreditCard, FileText, HandCoins, Landmark, MailPlus, PackageCheck, Truck, X } from "lucide-react";
 import {
   RotateCcw,
   Send,
@@ -554,7 +554,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 }}
                 className="w-full flex transition duration-400 bg-buttonColor2 hover:bg-colorHover text-zinc-100  py-3 px-5 rounded-xl justify-between" type="button">
                 {t('orderpage.modalSendButton2')}
-                <MessageCircle className="text-colorFundo" />
+                <FileText className="text-colorFundo" />
               </button>
               <button 
                 className="w-full flex transition duration-400 bg-buttonColor2  hover:bg-colorHover text-zinc-100 py-3 px-5 rounded-xl justify-between" type="button">
