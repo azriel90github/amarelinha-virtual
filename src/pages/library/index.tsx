@@ -89,8 +89,8 @@ export function LibraryPage() {
 								</p>	
 
 								<p>
-									<a href="/pdf/coordenadas_bancarias.pdf"><img className="rounded-t-xl w-80 h-full opacity-80" src="/doc-1.jpeg" alt="" />
-										<div className="flex cursor-pointer items-center justify-between transition duration-400 rounded-b-xl bg-searchColor text-zinc-100 py-2.5 px-8 w-80">
+									<a href="/pdf/coordenadas_bancarias.pdf"><img className="rounded-t-xl w-80 h-full" src="/doc-1.jpeg" alt="" />
+										<div className="flex cursor-pointer items-center justify-between transition duration-400 rounded-xl bg-searchColor text-zinc-100 py-2.5 px-8 w-80">
 											{t('biblioteca.coordenadasBancarias')}
 											<FolderOpen />
 										</div>
@@ -110,7 +110,7 @@ export function LibraryPage() {
 			</div>
 			
 			<footer
-				className={`queryFooterBlog flex py-3 gap-3 items-center flex-wrap justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-buttonColor bg-buttonColor2 ${
+				className={`flex py-3 gap-3 items-center flex-wrap justify-around fixed bottom-0 left-0 w-full transition-transform duration-500 ease-in-out border-t-2 border-buttonColor bg-buttonColor2 ${
 					isScrolled ? "translate-y-0" : "translate-y-full"
 				}`}
 			>
