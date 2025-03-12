@@ -1,14 +1,14 @@
 //import { t } from "i18next";
-import { ArrowLeft, Download, FolderOpen, House } from "lucide-react";
+import { ArrowLeft, House } from "lucide-react";
 import { MenuButton } from "../../components/buttons/menu-button";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 
 
 export function LibraryPage() {
 
-	const { t } = useTranslation();
+	//const { t } = useTranslation();
 	//Variavél navigate recebendo o useNavigate do react-router-dom
 	const navigate = useNavigate();
 	//Função homePage para navegar da blogPage para a homePage ao clicar no evento onclick{homePage}
@@ -66,41 +66,22 @@ export function LibraryPage() {
 				<div>
 					<div>
 						<div className="w-10/12 leading-loose flex flex-col gap-4 mx-auto pl-2">
-							<h1 className="text-4xl flex items-start justify-center text-buttonColor py-2 mt-8 mb-5 font-normal">
-								{t('biblioteca.bibliotecah3')}
-							</h1>
-							
-							<div className="libraryPage flex items-center w-full mb-48 justify-center gap-8">
-								<p>
-									<a href="/pdf/modelo_fatura.pdf">
-										<img className="rounded-t-xl w-80 h-auto opacity-80" src="/doc-1.jpeg" alt="" />
-										<div className="flex cursor-pointer items-center justify-between transition duration-400 rounded-b-xl bg-searchColor text-zinc-100 py-2.5 px-8 w-80">
-											{t('biblioteca.faturaDigital')}
-											<FolderOpen />
-										</div>
+						{/**
+							 *<h1 className="text-4xl flex items-start justify-center text-buttonColor py-2 mt-8 mb-5 font-normal">
+									{t('biblioteca.bibliotecah3')}
+								</h1>
+						 */}						
+							<div className="libraryPage flex flex-wrap items-center h-screen w-full justify-center gap-8">
+								<p className="">
+									<a href="/pdf/modelo_fatura.pdf" download="modelo_fatura.pdf">
+										<img className=" border-2 border-buttonColor rounded-xl w-80 h-auto" src="/doc-2.jpeg" alt="" />
 									</a>
-										<a className="text-zinc-100 font-medium text-lg mt-4 bg-searchColor w-80 flex justify-between items-center gap-2 px-2.5 py-2.5 rounded-full" href="/pdf/modelo_fatura.pdf" download="modelo_fatura.pdf">
-											<p className="bg-colorFundo w-full py-2.5 flex items-center justify-between px-6 rounded-full">
-												{t('biblioteca.baixarFatura')}
-												<Download />
-											</p>
-											
-										</a>
 								</p>	
 
 								<p>
-									<a href="/pdf/coordenadas_bancarias.pdf"><img className="rounded-t-xl w-80 h-full" src="/doc-1.jpeg" alt="" />
-										<div className="flex cursor-pointer items-center justify-between transition duration-400 rounded-xl bg-searchColor text-zinc-100 py-2.5 px-8 w-80">
-											{t('biblioteca.coordenadasBancarias')}
-											<FolderOpen />
-										</div>
+									<a href="/pdf/coordenadas_bancarias.pdf" download="coordenadas_bancarias.pdf">
+									<img className="rounded-xl w-80 h-full" src="/doc-1.jpeg" alt="" />
 									</a>
-										<a className="text-zinc-100 font-medium text-lg mt-4 bg-searchColor w-80 flex justify-between items-center gap-2 px-2.5 py-2.5 rounded-full" href="/pdf/coordenadas_bancarias.pdf" download="coordenadas_bancarias.pdf">
-											<p className="bg-colorFundo w-full py-2.5 flex items-center justify-between px-6 rounded-full">
-												{t('biblioteca.baixarCoordenadas')}
-												<Download />
-											</p>
-										</a>
 								</p>							
 							</div>
 				
