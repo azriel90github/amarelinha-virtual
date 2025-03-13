@@ -3,12 +3,12 @@ import { ArrowLeft, House } from "lucide-react";
 import { MenuButton } from "../../components/buttons/menu-button";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 
 export function LibraryPage() {
 
-	//const { t } = useTranslation();
+	const { t } = useTranslation();
 	//Variavél navigate recebendo o useNavigate do react-router-dom
 	const navigate = useNavigate();
 	//Função homePage para navegar da blogPage para a homePage ao clicar no evento onclick{homePage}
@@ -65,20 +65,21 @@ export function LibraryPage() {
 				
 				<div>
 					<div>
-						<div className="w-10/12 leading-loose flex flex-col gap-4 mx-auto pl-2">
-						{/**
-							 *<h1 className="text-4xl flex items-start justify-center text-buttonColor py-2 mt-8 mb-5 font-normal">
-									{t('biblioteca.bibliotecah3')}
-								</h1>
-						 */}						
+						<div className="w-10/12 leading-loose flex flex-col gap-4 mx-auto pl-2">					
 							<div className="libraryPage flex flex-wrap items-center h-screen w-full justify-center gap-8">
 								<p className="">
+									<h1 className="text-3xl flex items-start justify-center text-buttonColor mb-8 font-medium">
+										{t('biblioteca.faturaDigital')}
+									</h1>
 									<a href="/pdf/modelo_fatura.pdf" download="modelo_fatura.pdf">
-										<img className=" border-2 border-buttonColor rounded-xl w-80 h-auto" src="/doc-2.jpeg" alt="" />
+										<img className="rounded-xl w-80 h-auto" src="/doc-2.jpeg" alt="" />
 									</a>
 								</p>	
 
 								<p>
+									<h1 className="text-3xl flex items-start justify-center text-buttonColor mb-8 font-medium">
+										{t('biblioteca.coordenadasBancarias')}
+									</h1>
 									<a href="/pdf/coordenadas_bancarias.pdf" download="coordenadas_bancarias.pdf">
 									<img className="rounded-xl w-80 h-full" src="/doc-1.jpeg" alt="" />
 									</a>
