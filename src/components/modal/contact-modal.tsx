@@ -44,7 +44,7 @@ export function ContactModal() {
 				className="accountButton px-8 py-4 w-80 duration-400 flex items-center justify-between bg-buttonColor2 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 				onClick={openContactModal}
 			>
-				<p className="text-1xl font-normal">{t('homepage.buttonContact')}</p>
+				<p className="text-1xl font-medium">{t('homepage.buttonContact')}</p>
 				<Headset />
 			</button>
 				{isContactModalOpen && (

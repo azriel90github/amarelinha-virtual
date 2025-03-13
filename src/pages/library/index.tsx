@@ -67,7 +67,7 @@ export function LibraryPage() {
 					<div>
 						<div className="w-10/12 leading-loose flex flex-col gap-4 mx-auto pl-2">					
 							<div className="libraryPage flex flex-wrap items-center h-screen w-full justify-center gap-8">
-								<p className="">
+								<p>
 									<h1 className="text-3xl flex items-start justify-center text-buttonColor mb-8 font-medium">
 										{t('biblioteca.faturaDigital')}
 									</h1>
@@ -75,7 +75,6 @@ export function LibraryPage() {
 										<img className="rounded-xl w-80 h-auto" src="/doc-2.jpeg" alt="" />
 									</a>
 								</p>	
-
 								<p>
 									<h1 className="text-3xl flex items-start justify-center text-buttonColor mb-8 font-medium">
 										{t('biblioteca.coordenadasBancarias')}

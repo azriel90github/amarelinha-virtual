@@ -102,7 +102,7 @@ export function ProductDetail() {
 								<h2 className="text-buttonColor text-[20px] font-medium">
 									{t("cardMenu.descricao")}{" "}
 								</h2>
-								<p className="text-xl w-96 text-buttonColor mt-2">
+								<p className="text-1xl w-96 text-buttonColor mt-2">
 									{product.description || "Descrição não disponível."}
 								</p>
 							</div>

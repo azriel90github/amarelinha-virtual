@@ -78,7 +78,7 @@ export function HomePage() {
 								onClick={menuPage}
 								className="accountButton duration-400 flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
-								<p className="text-1xl font-normal">{t('homepage.buttonMenu')}</p>
+								<p className="text-1xl font-medium">{t('homepage.buttonMenu')}</p>
 								{/*
 									<div className="w-px h-6 bg-zinc-800">
 									</div>
@@ -90,14 +90,14 @@ export function HomePage() {
 								onClick={orderPage}
 								className="accountButton flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
-								<p className="text-1xl font-normal">{t('homepage.buttonCart')}</p>
+								<p className="text-1xl font-medium">{t('homepage.buttonCart')}</p>
 								<ShoppingCart className="size-6" />
 							</button>
 							<button type="button"
 								onClick={LibraryPage}
 								className="accountButton flex items-center justify-between w-80 bg-buttonColor2 px-8 py-4 rounded-full shadow-shape text-colorFundo hover:bg-colorHover hover:text-zinc-200 transition duration-400 font-medium text-xl"
 							>
-								<p className="text-1xl font-normal">{t('homepage.buttonLibrary')}</p>
+								<p className="text-1xl font-medium">{t('homepage.buttonLibrary')}</p>
 								<Library className="size-6" />
 							</button>
 							{/*

@@ -94,7 +94,7 @@ export function MenuPage() {
 					>
 						{/* Informações do produto */}
 						<div className="flex justify-between py-2 px-3 font-normal">
-							<p className="text-colorFundo text-xl">{product.title}</p>
+							<p className="text-colorFundo text-1.5xl font-medium">{product.title}</p>
 							<span className="">
 								<QrCodeButton productId={""} productUrl={""} />
 							</span>
