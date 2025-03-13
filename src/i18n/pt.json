@@ -92,7 +92,8 @@
   "modalQr": {
     "botaoFechar": "Fechar",
     "baixarQr": "Baixar QR Code",
-    "copiarLink": "Copiar Link"
+    "copiarLink": "Copiar Link",
+    "modalQr": "QRcode"
   },
 
   "orderpage": {

@@ -5,15 +5,16 @@ import { useTranslation } from "react-i18next";
 
 
 type QrCodeButtonProps = {
-  productId: string; // ID do produto
-  productUrl: string; // URL base do produto
+  productId: string;
+  productUrl: string;
+  variant?: "default" | "alternative";
 };
 
-export function QrCodeButton({ productId, productUrl }: QrCodeButtonProps) {
+export function QrCodeButton({ productId, productUrl, variant = "default" }: QrCodeButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const productLink = `${productUrl}/${productId}`;
-  const { t } = useTranslation();
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(productLink);
@@ -64,10 +65,17 @@ export function QrCodeButton({ productId, productUrl }: QrCodeButtonProps) {
   return (
     <>
       {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+      {/* Botão principal com variantes */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="bg-buttonColor hover:bg-colorHover transition duration-400 text-zinc-100 hover:text-zinc-200 rounded-2xl px-4 py-3.5"
+        className={
+          variant === "default"
+            ? "bg-buttonColor hover:bg-colorHover flex items-center justify-center transition duration-400 text-zinc-100 hover:text-zinc-200 rounded-2xl px-4 py-3.5"
+            : "bg-buttonColor2 hover:bg-colorHover qrButton transition duration-400 mx-auto text-white w-80 flex items-center justify-between px-5 py-3 rounded-2xl"
+        }
       >
+        
+        {variant === "alternative" && <span>{t("modalQr.modalQr")}</span>}
         <QrCode />
       </button>
 

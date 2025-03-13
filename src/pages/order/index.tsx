@@ -390,7 +390,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.number}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderNumber')}
-                    className="removeNumber py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-lx"
+                    className="removeNumber py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-1xl"
                   />
                   {/* Espaço fixo para mensagem de erro */}
                   <div className="ml-2 mb-0.5">
@@ -405,7 +405,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     placeholder={t('orderpage.placeholderPaymentMethod')}
                     type="text"
                     onClick={openPaymentMethodModal}
-                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-lx"
+                    className="flex items-center justify-between cursor-pointer m-0 py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-1xl"
                   />
                   
                   <div className="ml-2 mb-0.5">
@@ -469,7 +469,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.cityOrNeighborhood}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderCityOrNeighborhood')}
-                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-1xl"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.cityOrNeighborhood && (
@@ -482,7 +482,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     value={formData.landmark}
                     onChange={handleChange}
                     placeholder={t('orderpage.placeholderLandmark')}
-                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-lx"
+                    className="py-3 px-4 outline-none rounded-xl  bg-colorFundo text-buttonColor border-2 border-colorInput focus:border-2 focus:border-buttonColor2 placeholder:text-headerColor font-medium text-1xl"
                   />
                   <div className="ml-2 mb-0.5">
                   {formErrors.landmark && (
@@ -570,8 +570,8 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       {showValidationModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 bg-opacity-50">
           <div className="w-[540px] rounded-xl py-6 px-6 flex items-center justify-between bg-colorHover">
-            <p className="text-red-500 text-lg font-normal">{validationMessage}</p>
-            <MailPlus className="text-red-500" />
+            <p className="text-errorColor text-lg font-normal">{validationMessage}</p>
+            <MailPlus className="text-errorColor" />
           </div>
         </div>
       )}

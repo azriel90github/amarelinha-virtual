@@ -59,23 +59,21 @@ export function ProductDetail() {
 				{/* Detalhes do produto */}
 				{product ? (
 					<div className="produtDetailMobile flex items-center pt-20 justify-center gap-10">
-						<div>
+						<div className="flex flex-col gap-5">
 							<img
 								src={getImageByTitle(product.title)} // Usando a função do contexto para pegar a imagem
 								alt={`Imagem de ${product.title}`}
 								className="w-96 h-96 mx-auto"
 							/>
+							<QrCodeButton variant="alternative" productId={""} productUrl={""} />
 						</div>
 
 						<div className="produtDetailDescMobile flex flex-col">
 							<div>
-								<div className="flex items-center gap-3 justify-between">
+								<div className="">
 									<h1 className="text-buttonColor text-4xl font-light">
 										{product.title}
 									</h1>
-									<p className="flex gap-2">
-										<QrCodeButton productId={""} productUrl={""} />
-									</p>
 								</div>
 								<span className="flex text-zinc-200 font-normal mt-1 text-2xl gap-2 py-3">
 									<small className="text-2xl text-moneyColor1">kz</small>
@@ -102,7 +100,7 @@ export function ProductDetail() {
 								<h2 className="text-buttonColor text-[20px] font-medium">
 									{t("cardMenu.descricao")}{" "}
 								</h2>
-								<p className="text-1xl w-96 text-buttonColor mt-2">
+								<p className="text-1xl w-[22rem] text-buttonColor mt-2">
 									{product.description || "Descrição não disponível."}
 								</p>
 							</div>
