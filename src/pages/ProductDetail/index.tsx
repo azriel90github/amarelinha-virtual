@@ -166,7 +166,7 @@ export function ProductDetail() {
 					<button
 						type="button"
 						onClick={menuPage}
-						className="flex gap-2 text-buttonColor"
+						className="flex gap-2 text-colorFundo"
 					>
 						{" "}
 						{/* Clicar na seta da página menu e levar para o inicio*/}
