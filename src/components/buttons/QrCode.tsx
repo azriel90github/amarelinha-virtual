@@ -82,7 +82,7 @@ export function QrCodeButton({ productId, productUrl, variant = "default" }: QrC
       {isModalOpen && (
           <div 
           className="fixed inset-0 bg-black bg-opacity-50 flex text-1lx justify-center items-center z-50">
-          <div className="bg-buttonColor p-4 rounded-3xl">
+          <div className="bg-colorHover p-4 rounded-3xl">
             {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
             <button
               onClick={() => setIsModalOpen(false)}
@@ -99,7 +99,7 @@ export function QrCodeButton({ productId, productUrl, variant = "default" }: QrC
               {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
               <button
                 onClick={handleDownloadQrCode}
-                className="bg-colorHover flex items-center justify-between rounded-xl text-white px-5 py-2.5 w-full hover:bg-green-600 transition"
+                className="bg-buttonColor2 flex items-center justify-between rounded-xl text-white px-5 py-2.5 w-full hover:bg-green-600 transition"
               >
                 {t("modalQr.baixarQr")}
                 <HardDriveDownload className="size-5" />
@@ -107,7 +107,7 @@ export function QrCodeButton({ productId, productUrl, variant = "default" }: QrC
               {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
               <button
                 onClick={handleCopyLink}
-                className="bg-colorHover flex items-center justify-between text-white px-5 py-2.5 w-full rounded-xl hover:bg-blue-600 transition"
+                className="bg-buttonColor2 flex items-center justify-between text-white px-5 py-2.5 w-full rounded-xl hover:bg-blue-600 transition"
               >
                 {t("modalQr.copiarLink")}
                 <Link className="size-5" />
