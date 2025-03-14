@@ -75,7 +75,7 @@ export function ProductDetail() {
 										{product.title}
 									</h1>
 								</div>
-								<span className="flex text-zinc-200 font-normal mt-1 text-2xl gap-2 py-3">
+								<span className="flex justify-center text-zinc-200 font-normal mt-6 text-2xl gap-2 py-3">
 									<small className="text-2xl text-moneyColor1">kz</small>
 									<p className="text-8xl mt-1">{product.price}</p>
 									<small className="text-2xl">00</small>

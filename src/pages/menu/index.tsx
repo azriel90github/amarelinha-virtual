@@ -3,6 +3,7 @@ import {
 	ArrowLeft,
 	CircleCheck,
 	House,
+	LayoutList,
 	Minus,
 	Plus,
 	ShoppingCart,
@@ -93,8 +94,8 @@ export function MenuPage() {
 						className="bg-buttonColor2 rounded-3xl py-4 px-4 w-80 cardProd"
 					>
 						{/* Informações do produto */}
-						<div className="flex justify-between py-2 px-3 font-normal">
-							<p className="text-colorFundo text-1.5xl font-medium">{product.title}</p>
+						<div className="flex justify-between gap-5 py-2 px-3 font-normal">
+							<p className="text-colorFundo w-40 text-1.5xl font-medium">{product.title}</p>
 							<span className="">
 								<QrCodeButton productId={""} productUrl={""} />
 							</span>
@@ -113,17 +114,20 @@ export function MenuPage() {
 						</span>
 
 						{/* Texto Saber Mais */}
-						<p className="text-center py-3 mb-2 text-buttonColor font-medium text-xl">
-							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button
+								type="button"
 								onClick={() =>
 									navigate(`/product/${product.id}`, { state: { product } })
 								} // Passa os dados via state
-								className="text-colorFundo underline-none text-[19px] text-smal"
+								className="flex items-center justify-between py-4 px-3 w-full text-colorFundo text-1xl font-medium"
 							>
-								{t('cardMenu.detalhesProduto')}
+								<div className="text-1.5xl">
+									{t('cardMenu.detalhesProduto')}
+								</div>
+								<div>
+									<LayoutList className="text-zinc-50" />
+								</div>
 							</button>
-						</p>
 
 						<div className="flex flex-col gap-3">
 							<button

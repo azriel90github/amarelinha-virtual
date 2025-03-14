@@ -13,9 +13,27 @@ const ImageContext = createContext<ImageContextProps | undefined>(undefined);
 // Componente Provider para o contexto de imagens
 export const ImageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const images: { [key: string]: string } = {
-    "Hamburguer de carne": '/menu/burguer_5.png',
-    "Menu papa tudo": '/menu/burguer_5.png',
-    "Fahitas de carne": '/menu/burguer_5.png'
+    "Hambúrguer tuneza simples de Carne": '/menu/burguer_5.png',
+    "Hambúrguer tuneza simples de Frango": '/menu/burguer_5.png',
+    "Menu tuneza de Carne": '/menu/burguer_5.png',
+    "Menu tuneza de Frango": '/menu/burguer_5.png',
+    "Papa tudo": '/menu/burguer_5.png',
+    "Menu Papa tudo": '/menu/burguer_5.png',
+    "Batata frita": '/menu/burguer_5.png',
+    "Pote de Molhos ( cada )": '/menu/burguer_5.png',
+    "Ovo": '/menu/burguer_5.png',
+
+    "Coca Cola": '/menu/burguer_5.png',
+    "Fanta": '/menu/burguer_5.png',
+    "Sprite": '/menu/burguer_5.png',
+    "Pepsi": '/menu/burguer_5.png',
+    "Mirinda": '/menu/burguer_5.png',
+    "Água Pura": '/menu/burguer_5.png',
+
+    "Fahita de Carne": '/menu/burguer_5.png',
+    "Fahita de Frango": '/menu/burguer_5.png',
+    "Fahita Mista": '/menu/burguer_5.png',
+    
     // Adicione outras associações título -> imagem conforme necessário
   };
 
