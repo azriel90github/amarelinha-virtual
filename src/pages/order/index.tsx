@@ -283,6 +283,30 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       }
   
       console.log("Dados salvos no banco de dados com sucesso!");
+
+      // Enviar o PDF para o WhatsApp da hamburgueria
+      console.log('Enviando PDF para o WhatsApp da hamburgueria...');
+      const reader = new FileReader();
+        reader.readAsDataURL(pdfBlob);
+        reader.onloadend = async () => {
+        const base64String = reader.result?.toString().split(",")[1];
+        if (!base64String) {
+          console.error("Erro ao converter PDF para base64");
+          return;
+        }
+  
+        const whatsappResponse = await fetch("http://localhost:3334/send-pdf", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ pdfBase64: base64String }),
+        });
+  
+        if (!whatsappResponse.ok) throw new Error("Erro ao enviar PDF para o WhatsApp");
+  
+        console.log("PDF enviado para o WhatsApp da hamburgueria com sucesso!");
+      };
+
+
   
       setShowSuccessModal(true);
       resetCart();

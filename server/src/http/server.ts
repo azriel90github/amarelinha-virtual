@@ -2,6 +2,7 @@ import fastify from 'fastify';
 import cors from '@fastify/cors';
 import { createSendOrder } from './routes/create-order';
 import { getProducts } from './routes/create-menu';
+import { sendPdfToWhatsApp } from '../functions/send-pdf';
 
 
 const app = fastify();
@@ -15,6 +16,7 @@ async function startServer() {
   // Rotas adicionais
   app.register(createSendOrder);
   app.register(getProducts);
+  app.register(sendPdfToWhatsApp);
 
   app.addHook('onRequest', async (request, reply) => {
     app.log.info(`🔹 Requisição recebida: ${request.method} ${request.url}`);
