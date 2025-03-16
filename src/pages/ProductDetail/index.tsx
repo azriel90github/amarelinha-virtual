@@ -65,6 +65,7 @@ export function ProductDetail() {
 								alt={`Imagem de ${product.title}`}
 								className="w-96 h-96 mx-auto"
 							/>
+							
 							<QrCodeButton variant="alternative" productId={""} productUrl={""} />
 						</div>
 
@@ -80,9 +81,12 @@ export function ProductDetail() {
 									<p className="text-8xl mt-1">{product.price}</p>
 									<small className="text-2xl">00</small>
 								</span>
-								<div className="flex gap-2">
+								<div className="flex items-center gap-2">
 									{/* Div para estrelas */}
 									<div className="starDiv flex my-3 pb-1">
+									<div>
+									⭐ ⭐ ⭐ ⭐
+								</div>
                   {Array(product.hearts || 0)
                     .fill(null)
                     .map((_, index) => (

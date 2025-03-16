@@ -100,12 +100,15 @@ export function MenuPage() {
 								<QrCodeButton productId={""} productUrl={""} />
 							</span>
 						</div>
-						<div className="py-3">
+						<div className="py-3 flex flex-col items-center">
 							<img
 								className="mx-auto w-44 h-40 rounded-full"
 								src={getImageByTitle(product.title)} // Usando o título do produto
 								alt={`Product ${product.title}`}
 							/>
+							<div>
+								⭐ ⭐ ⭐ ⭐
+							</div>
 						</div>
 						<span className="flex justify-center text-zinc-200 font-normal text-2xl gap-2 py-3">
 							<small className="text-lx text-moneyColor1">kz</small>
