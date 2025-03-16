@@ -76,17 +76,20 @@ export function ProductDetail() {
 										{product.title}
 									</h1>
 								</div>
-								<span className="flex justify-center text-zinc-200 font-normal mt-6 text-2xl gap-2 py-3">
+								<span className="flex starDiv1 text-zinc-200 font-normal mt-6 text-2xl gap-2 py-3">
 									<small className="text-2xl text-moneyColor1">kz</small>
 									<p className="text-8xl mt-1">{product.price}</p>
 									<small className="text-2xl">00</small>
 								</span>
 								<div className="flex items-center gap-2">
 									{/* Div para estrelas */}
-									<div className="starDiv flex my-3 pb-1">
-									<div>
-									⭐ ⭐ ⭐ ⭐
-								</div>
+									<div className="starDiv flex pt-2 pb-5">
+									<div className="flex items-center gap-4">
+										<Star className="text-yellow-400" />
+										<Star className="text-yellow-400" />
+										<Star className="text-yellow-400" />
+										<Star className="text-yellow-400" />
+									</div>
                   {Array(product.hearts || 0)
                     .fill(null)
                     .map((_, index) => (

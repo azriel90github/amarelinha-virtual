@@ -35,8 +35,15 @@
 	}
 
 	.starDiv {
+		margin: auto;
+	}
+
+	.starDiv1 {
+		display: flex;
+		align-items: center;
 		justify-content: center;
 	}
+
 
 	.produtDetailDescMobile {
 		display: flex;

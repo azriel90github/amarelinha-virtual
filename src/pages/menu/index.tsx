@@ -7,6 +7,7 @@ import {
 	Minus,
 	Plus,
 	ShoppingCart,
+	Star,
 	Trash2,
 } from "lucide-react"; // Ícones do Lucide
 //import { useState, useEffect } from "react";
@@ -106,8 +107,11 @@ export function MenuPage() {
 								src={getImageByTitle(product.title)} // Usando o título do produto
 								alt={`Product ${product.title}`}
 							/>
-							<div>
-								⭐ ⭐ ⭐ ⭐
+							<div className="flex items-center gap-2">
+								<Star className="text-yellow-400" />
+								<Star className="text-yellow-400" />
+								<Star className="text-yellow-400" />
+								<Star className="text-yellow-400" />
 							</div>
 						</div>
 						<span className="flex justify-center text-zinc-200 font-normal text-2xl gap-2 py-3">

@@ -1,11 +1,13 @@
 import type { FastifyPluginAsync } from 'fastify';
-import fs from 'fs';
-import path from 'path';
+import Twilio from 'twilio';
 
-// Configuração do 360Dialog
-const WHATSAPP_API_URL = 'https://waba.360dialog.io/v1/messages';
-const WHATSAPP_TOKEN = 'SEU_TOKEN_DO_360DIALOG'; // Substitua pelo seu token
-const HAMBURGUERIA_WHATSAPP_NUMBER = '932101903'; // Número fixo da hamburgueria
+// Configuração Twilio
+const TWILIO_ACCOUNT_SID = 'SEU_TWILIO_SID'; // Pegue no Twilio
+const TWILIO_AUTH_TOKEN = 'SEU_TWILIO_AUTH_TOKEN'; // Pegue no Twilio
+const HAMBURGUERIA_WHATSAPP_NUMBER = 'whatsapp:+244XXXXXXXXX'; // Número fixo da empresa
+const TWILIO_WHATSAPP_NUMBER = 'whatsapp:+14155238886'; // Número do Twilio (fixo)
+
+const client = Twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 export const sendPdfToWhatsApp: FastifyPluginAsync = async (app) => {
   app.post('/send-pdf', async (request, reply) => {
@@ -16,42 +18,24 @@ export const sendPdfToWhatsApp: FastifyPluginAsync = async (app) => {
         return reply.status(400).send({ error: 'O PDF é obrigatório' });
       }
 
-      // Converter Base64 para Buffer
-      const pdfBuffer = Buffer.from(pdfBase64, 'base64');
+      console.log(`📤 Enviando PDF para a hamburgueria: ${HAMBURGUERIA_WHATSAPP_NUMBER} via WhatsApp...`);
 
-      // Criar arquivo temporário
-      const filePath = path.join(__dirname, 'temp.pdf');
-      fs.writeFileSync(filePath, pdfBuffer);
-
-      // Enviar o PDF via Fastify HTTP Client
-      const response = await app.inject({
-        method: 'POST',
-        url: WHATSAPP_API_URL,
-        headers: {
-          'Content-Type': 'application/json',
-          'D360-API-KEY': WHATSAPP_TOKEN
-        },
-        payload: {
-          messaging_product: 'whatsapp',
-          recipient_type: 'individual',
-          to: HAMBURGUERIA_WHATSAPP_NUMBER,
-          type: 'document',
-          document: {
-            filename: 'Fatura.pdf', // Nome do arquivo
-            mime_type: 'application/pdf', // Tipo do arquivo
-            data: pdfBase64 // O próprio PDF, sem precisar de link externo
-          }
-        }
+      // Enviar o PDF via Twilio
+      const message = await client.messages.create({
+        from: TWILIO_WHATSAPP_NUMBER,
+        to: HAMBURGUERIA_WHATSAPP_NUMBER, // Sempre envia para o número fixo da empresa
+        mediaUrl: `data:application/pdf;base64,${pdfBase64}`, // Envia o PDF diretamente
+        body: 'Aqui está a fatura do pedido. Obrigado! 🍔'
       });
 
-      console.log('📩 PDF enviado com sucesso!', response.json());
-      fs.unlinkSync(filePath);
+      console.log('📩 PDF enviado com sucesso!', message.sid);
 
       reply.send({ message: `PDF enviado para ${HAMBURGUERIA_WHATSAPP_NUMBER}!` });
     } catch (error) {
-      console.error('Erro ao enviar o PDF:', error);
+      console.error('❌ Erro ao enviar o PDF:', error);
       reply.status(500).send({ error: 'Erro ao enviar o PDF' });
     }
   });
 };
+
 
