@@ -240,25 +240,25 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   
     if (!validateForm()) return;
   
-    console.log('Formulário válido, enviando...');
+    console.log("📝 Formulário válido, processando pedido...");
   
     try {
-      console.log('Gerando PDF...');
+      console.log("📄 Gerando PDF...");
       const invoiceComponent = generateInvoice(formData);
       if (!invoiceComponent) {
-        console.error('Erro ao gerar o componente do PDF.');
+        console.error("❌ Erro ao gerar o componente do PDF.");
         return;
       }
   
       const pdfBlob = await pdf(invoiceComponent).toBlob();
       if (!pdfBlob) {
-        console.error('Erro ao gerar o PDF: Blob vazio.');
+        console.error("❌ Erro ao gerar o PDF: Blob vazio.");
         return;
       }
   
-      // Criar um link para baixar o PDF
+      // Criar link para download do PDF
       const pdfUrl = URL.createObjectURL(pdfBlob);
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.href = pdfUrl;
       a.download = `Pedido - ${formData.name}.pdf`;
       document.body.appendChild(a);
@@ -266,77 +266,79 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       document.body.removeChild(a);
       URL.revokeObjectURL(pdfUrl);
   
-      console.log('📥 PDF baixado com sucesso!');
+      console.log("📥 PDF baixado com sucesso!");
   
-      // Enviar dados para o banco de dados
-      console.log('📡 Enviando dados para o banco de dados...');
-      const response = await fetch("http://localhost:3334/order", {
+      // 🔹 Enviar dados do pedido para o banco de dados
+      console.log("📡 Enviando dados para o banco de dados...");
+      const orderResponse = await fetch("http://localhost:3334/order", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
   
-      if (!response.ok) {
-        throw new Error("❌ Erro ao salvar no banco de dados.");
+      if (!orderResponse.ok) {
+        throw new Error(`❌ Erro ao salvar no banco: ${await orderResponse.text()}`);
       }
   
-      console.log("✅ Dados salvos no banco de dados com sucesso!");
+      console.log("✅ Pedido salvo no banco de dados com sucesso!");
   
       // 🔹 Enviar o PDF para o WhatsApp da hamburgueria
       await sendPdfToWhatsApp(pdfBlob);
   
-      // Mostrar modal de sucesso e limpar formulário/carrinho
+      // Exibir modal de sucesso e resetar o formulário
       setShowSuccessModal(true);
       resetCart();
       resetForm();
     } catch (error) {
-      console.error('❌ Erro na requisição:', error);
+      console.error("❌ Erro na requisição:", error);
     }
   };
   
-  // 🔹 Função para enviar PDF ao WhatsApp
-  const sendPdfToWhatsApp = async (pdfBlob: Blob) => {
-    try {
-      console.log('📤 Enviando PDF para o WhatsApp da hamburgueria...');
-  
-      // Converter Blob para Base64
-      const pdfBase64 = await convertBlobToBase64(pdfBlob);
-      if (!pdfBase64) throw new Error('Erro ao converter PDF para base64');
-  
-      // Enviar o PDF para o backend Fastify
-      const response = await fetch("http://localhost:3334/send-pdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pdfBase64 }),
-      });
-  
-      if (!response.ok) {
-        const errorMessage = await response.text();
-        throw new Error(`Erro ao enviar PDF: ${errorMessage}`);
-      }
-  
-      console.log("✅ PDF enviado para o WhatsApp da hamburgueria com sucesso!");
-    } catch (error) {
-      console.error("❌ Erro ao enviar PDF:", error);
-    }
-  };
-  
-  // 🔹 Função auxiliar para converter Blob em Base64
-  const convertBlobToBase64 = (blob: Blob): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(blob);
-      
-      reader.onloadend = () => {
-        const base64String = reader.result?.toString().split(",")[1];
-        base64String ? resolve(base64String) : reject("Falha na conversão para Base64");
-      };
-  
-      reader.onerror = () => reject("Erro ao ler o arquivo PDF");
+  // 🔹 Função para converter Blob para Base64
+const convertBlobToBase64 = (blob: Blob): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64String = reader.result as string;
+      resolve(base64String.split(",")[1]); // Remove o prefixo "data:application/pdf;base64,"
+    };
+    reader.onerror = () => {
+      reject(new Error("❌ Erro ao converter Blob para Base64"));
+    };
+    reader.readAsDataURL(blob);
+  });
+};
+
+// 🔹 Função para enviar o PDF ao WhatsApp da hamburgueria
+const sendPdfToWhatsApp = async (pdfBlob: Blob) => {
+  try {
+    console.log("📤 Preparando envio do PDF para o WhatsApp...");
+
+    // Converter Blob para Base64
+    const pdfBase64 = await convertBlobToBase64(pdfBlob);
+    if (!pdfBase64) throw new Error("❌ Erro ao converter PDF para base64");
+
+    // Enviar PDF ao backend para envio via WhatsApp
+    const response = await fetch("http://localhost:3334/send-pdf", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pdfBase64 }),
     });
-  };
+
+    if (!response.ok) {
+      const errorMessage = await response.text();
+      throw new Error(`❌ Erro ao enviar PDF: ${errorMessage}`);
+    }
+
+    console.log("✅ PDF enviado para o WhatsApp da hamburgueria com sucesso!");
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("❌ Erro ao enviar PDF para o WhatsApp:", error.message);
+    } else {
+      console.error("❌ Erro ao enviar PDF para o WhatsApp:", String(error));
+    }
+  }
+};  
   
   
 
