@@ -14,6 +14,7 @@ import { useInvoice } from "../../context/InvoiceContext";
 import { pdf } from "@react-pdf/renderer";
 import { useLocation } from "react-router-dom";
 //import emailjs from 'emailjs-com';
+import { sendPdfToEmail } from './sendPdfToEmail';
 
 
 import { useTranslation } from 'react-i18next';
@@ -234,7 +235,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   };
 
   const { resetCart } = useCart(); // Assumindo que você usa essa biblioteca para gerar PDFs.
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
@@ -282,65 +283,17 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   
       console.log("✅ Pedido salvo no banco de dados com sucesso!");
   
-      // 🔹 Enviar o PDF para o WhatsApp da hamburgueria
-      await sendPdfToWhatsApp(pdfBlob);
+      // 🔹 Enviar o PDF para o email da hamburgueria
+      await sendPdfToEmail(pdfBlob);
   
       // Exibir modal de sucesso e resetar o formulário
       setShowSuccessModal(true);
       resetCart();
-      resetForm();
+      resetForm();  
     } catch (error) {
       console.error("❌ Erro na requisição:", error);
     }
-  };
-  
-  // 🔹 Função para converter Blob para Base64
-const convertBlobToBase64 = (blob: Blob): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      const base64String = reader.result as string;
-      resolve(base64String.split(",")[1]); // Remove o prefixo "data:application/pdf;base64,"
-    };
-    reader.onerror = () => {
-      reject(new Error("❌ Erro ao converter Blob para Base64"));
-    };
-    reader.readAsDataURL(blob);
-  });
-};
-
-// 🔹 Função para enviar o PDF ao WhatsApp da hamburgueria
-const sendPdfToWhatsApp = async (pdfBlob: Blob) => {
-  try {
-    console.log("📤 Preparando envio do PDF para o WhatsApp...");
-
-    // Converter Blob para Base64
-    const pdfBase64 = await convertBlobToBase64(pdfBlob);
-    if (!pdfBase64) throw new Error("❌ Erro ao converter PDF para base64");
-
-    // Enviar PDF ao backend para envio via WhatsApp
-    const response = await fetch("http://localhost:3334/send-pdf", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ pdfBase64 }),
-    });
-
-    if (!response.ok) {
-      const errorMessage = await response.text();
-      throw new Error(`❌ Erro ao enviar PDF: ${errorMessage}`);
-    }
-
-    console.log("✅ PDF enviado para o WhatsApp da hamburgueria com sucesso!");
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error("❌ Erro ao enviar PDF para o WhatsApp:", error.message);
-    } else {
-      console.error("❌ Erro ao enviar PDF para o WhatsApp:", String(error));
-    }
-  }
-};  
-  
-  
+  };  
 
   return (
     <div className="max-w-6xl px-6 py-10 mx-auto bg-fundoHome bg-no-repeat bg-right-top">

@@ -1,36 +1,43 @@
 import type { FastifyPluginAsync } from 'fastify';
 import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
+import { Dropbox } from 'dropbox'; // Importe o SDK do Dropbox
 import { env } from '../env';
 import 'dotenv/config'; // Importa as variáveis de ambiente antes de tudo
 
-// Configuração do Google Drive
-const oauth2Client = new google.auth.OAuth2(
-  env.GOOGLE_DRIVE_CLIENT_ID,
-  env.GOOGLE_DRIVE_CLIENT_SECRET
-);
-
-oauth2Client.setCredentials({
-  refresh_token: env.GOOGLE_DRIVE_REFRESH_TOKEN,
+// Configuração do Dropbox
+const dbx = new Dropbox({
+  accessToken: env.DROPBOX_ACCESS_TOKEN, // Use o Access Token gerado no Dropbox App Console
 });
 
-const drive = google.drive({ version: 'v3', auth: oauth2Client });
+// Função para fazer upload do PDF no Dropbox
+async function uploadPdfToDropbox(pdfBuffer: Buffer, fileName: string): Promise<string> {
+  try {
+    const response = await dbx.filesUpload({
+      path: `/${fileName}`, // Caminho onde o arquivo será salvo
+      contents: pdfBuffer, // Conteúdo do PDF
+    });
 
-// Função para fazer upload do PDF no Google Drive
-async function uploadPdfToDrive(pdfBuffer: Buffer, fileName: string): Promise<string> {
-  const res = await drive.files.create({
-    requestBody: {
-      name: fileName,
-      parents: [env.GOOGLE_DRIVE_FOLDER_ID], // Pasta no Google Drive
-    },
-    media: {
-      mimeType: 'application/pdf',
-      body: pdfBuffer,
-    },
-    fields: 'id', // Retorna apenas o ID do arquivo
-  });
+    // Retorna o ID do arquivo (ou o caminho)
+    return response.result.id;
+  } catch (error) {
+    console.error('Erro ao fazer upload no Dropbox:', error);
+    throw error;
+  }
+}
 
-  return res.data.id!; // Retorna o ID do arquivo no Google Drive
+// Função para gerar um link compartilhável do PDF no Dropbox
+async function getSharedLink(fileId: string): Promise<string> {
+  try {
+    const response = await dbx.sharingCreateSharedLinkWithSettings({
+      path: fileId, // ID ou caminho do arquivo
+    });
+
+    // Retorna o link compartilhável
+    return response.result.url;
+  } catch (error) {
+    console.error('Erro ao gerar link compartilhável:', error);
+    throw error;
+  }
 }
 
 // Configuração do Nodemailer
@@ -43,16 +50,14 @@ const transporter = nodemailer.createTransport({
 });
 
 // Função para enviar o email com o link do PDF
-async function sendEmailWithPdfLink(pdfId: string) {
-  const previewLink = `https://drive.google.com/file/d/${pdfId}/preview`;
-
+async function sendEmailWithPdfLink(pdfLink: string) {
   const mailOptions = {
     from: env.EMAIL_USER,
     to: env.HAMBURGUERIA_EMAIL,
     subject: 'Aqui está a fatura do pedido 🍔',
     html: `
-      <p>Clique <a href="${previewLink}">aqui</a> para visualizar o PDF.</p>
-      <iframe src="${previewLink}" width="600" height="780" style="border: none;"></iframe>
+      <p>Clique <a href="${pdfLink}">aqui</a> para visualizar o PDF.</p>
+      <iframe src="${pdfLink}" width="600" height="780" style="border: none;"></iframe>
     `,
   };
 
@@ -68,22 +73,27 @@ export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
         return reply.status(400).send({ error: 'O PDF é obrigatório' });
       }
 
-      console.log(`📤 Enviando PDF para o Google Drive...`);
+      console.log(`📤 Enviando PDF para o Dropbox...`);
 
       // Converter o PDF base64 em um buffer
       const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
-      // Fazer upload do PDF no Google Drive
-      const pdfId = await uploadPdfToDrive(pdfBuffer, 'fatura.pdf');
+      // Fazer upload do PDF no Dropbox
+      const fileId = await uploadPdfToDropbox(pdfBuffer, 'fatura.pdf');
 
-      console.log('📁 PDF carregado no Google Drive com sucesso! ID:', pdfId);
+      console.log('📁 PDF carregado no Dropbox com sucesso! ID:', fileId);
+
+      // Gerar um link compartilhável
+      const pdfLink = await getSharedLink(fileId);
+
+      console.log('🔗 Link do PDF gerado com sucesso:', pdfLink);
 
       // Enviar o email com o link do PDF
-      await sendEmailWithPdfLink(pdfId);
+      await sendEmailWithPdfLink(pdfLink);
 
       console.log('📩 Email enviado com sucesso!');
 
-      reply.send({ message: `PDF enviado para ${env.HAMBURGUERIA_EMAIL}!`, pdfId });
+      reply.send({ message: `PDF enviado para ${env.HAMBURGUERIA_EMAIL}!`, pdfLink });
     } catch (error) {
       if (error instanceof Error) {
         console.error('❌ Erro ao enviar o email:', error.message);
