@@ -4,6 +4,7 @@ import { Dropbox } from 'dropbox'; // Importe o SDK do Dropbox
 import { env } from '../env';
 import 'dotenv/config'; // Importa as variáveis de ambiente antes de tudo
 
+
 // Configuração do Dropbox
 const dbx = new Dropbox({
   accessToken: env.DROPBOX_ACCESS_TOKEN, // Use o Access Token gerado no Dropbox App Console
@@ -65,7 +66,10 @@ async function sendEmailWithPdfLink(pdfLink: string) {
 }
 
 export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
-  app.post('/send-email', async (request, reply) => {
+  // Middleware para permitir o uso de tradução
+  const { t } = useTranslation();
+
+  app.post('/send-email', async (request, reply) => { 
     try {
       const { pdfBase64 } = request.body as { pdfBase64: string };
 
@@ -79,7 +83,7 @@ export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
       const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
       // Fazer upload do PDF no Dropbox
-      const fileId = await uploadPdfToDropbox(pdfBuffer, `Pedido - ${formData.name}.pdf`);
+      const fileId = await uploadPdfToDropbox(pdfBuffer, `Pedido - ${FormData.name}.pdf`);
 
       console.log('📁 PDF carregado no Dropbox com sucesso! ID:', fileId);
 
@@ -105,3 +109,7 @@ export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
     }
   });
 };
+
+function useTranslation(): { t: any; } {
+  throw new Error('Function not implemented.');
+}
