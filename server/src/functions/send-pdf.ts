@@ -79,7 +79,7 @@ export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
       const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
       // Fazer upload do PDF no Dropbox
-      const fileId = await uploadPdfToDropbox(pdfBuffer, 'fatura.pdf');
+      const fileId = await uploadPdfToDropbox(pdfBuffer, `Pedido - ${formData.name}.pdf`);
 
       console.log('📁 PDF carregado no Dropbox com sucesso! ID:', fileId);
 
