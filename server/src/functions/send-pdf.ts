@@ -1,25 +1,21 @@
 import type { FastifyPluginAsync } from 'fastify';
-import nodemailer from 'nodemailer';
-import { Dropbox } from 'dropbox'; // Importe o SDK do Dropbox
-import { env } from '../env';
-import 'dotenv/config'; // Importa as variáveis de ambiente antes de tudo
-
+import { Dropbox } from 'dropbox';
+import { emailjs } from '@emailjs/nodejs';
+import "dotenv/config";
 
 // Configuração do Dropbox
 const dbx = new Dropbox({
-  accessToken: env.DROPBOX_ACCESS_TOKEN, // Use o Access Token gerado no Dropbox App Console
+  accessToken: process.env.DROPBOX_ACCESS_TOKEN,
 });
 
 // Função para fazer upload do PDF no Dropbox
 async function uploadPdfToDropbox(pdfBuffer: Buffer, fileName: string): Promise<string> {
   try {
-    const response = await dbx.filesUpload({
-      path: `/${fileName}`, // Caminho onde o arquivo será salvo
-      contents: pdfBuffer, // Conteúdo do PDF
+    await dbx.filesUpload({
+      path: `/${fileName}`,
+      contents: pdfBuffer,
     });
-
-    // Retorna o ID do arquivo (ou o caminho)
-    return response.result.id;
+    return `/${fileName}`; // Retornando o caminho do arquivo, não o ID
   } catch (error) {
     console.error('Erro ao fazer upload no Dropbox:', error);
     throw error;
@@ -27,54 +23,46 @@ async function uploadPdfToDropbox(pdfBuffer: Buffer, fileName: string): Promise<
 }
 
 // Função para gerar um link compartilhável do PDF no Dropbox
-async function getSharedLink(fileId: string): Promise<string> {
+async function getSharedLink(filePath: string): Promise<string> {
   try {
     const response = await dbx.sharingCreateSharedLinkWithSettings({
-      path: fileId, // ID ou caminho do arquivo
+      path: filePath,
     });
-
-    // Retorna o link compartilhável
-    return response.result.url;
+    return response.result.url.replace('?dl=0', '?dl=1'); // Força o download
   } catch (error) {
     console.error('Erro ao gerar link compartilhável:', error);
     throw error;
   }
 }
 
-// Configuração do Nodemailer
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: env.EMAIL_USER,
-    pass: env.EMAIL_PASSWORD,
-  },
-});
-
-// Função para enviar o email com o link do PDF
-async function sendEmailWithPdfLink(pdfLink: string) {
-  const mailOptions = {
-    from: env.EMAIL_USER,
-    to: env.HAMBURGUERIA_EMAIL,
-    subject: 'Aqui está a fatura do pedido 🍔',
-    html: `
-      <p>Clique <a href="${pdfLink}">aqui</a> para visualizar o PDF.</p>
-      <iframe src="${pdfLink}" width="600" height="780" style="border: none;"></iframe>
-    `,
+// Função para enviar o email com o link do PDF via EmailJS
+async function sendEmailWithPdfLink(pdfLink: string, recipientEmail: string) {
+  const templateParams = {
+    recipient_email: recipientEmail,
+    pdf_link: pdfLink,
   };
 
-  await transporter.sendMail(mailOptions);
+  try {
+    await emailjs.send(
+      process.env.EMAILJS_SERVICE_ID!,
+      process.env.EMAILJS_TEMPLATE_ID!,
+      templateParams,
+      { publicKey: process.env.EMAILJS_PUBLIC_KEY! }
+    );
+    console.log('📩 Email enviado com sucesso!');
+  } catch (error) {
+    console.error('❌ Erro ao enviar o email via EmailJS:', error);
+    throw error;
+  }
 }
 
 export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
-  // Middleware para permitir o uso de tradução
-  const { t } = useTranslation();
-
   app.post('/send-email', async (request, reply) => { 
     try {
-      const { pdfBase64 } = request.body as { pdfBase64: string };
+      const { pdfBase64, name, recipientEmail } = request.body as { pdfBase64: string; name: string; recipientEmail: string };
 
-      if (!pdfBase64) {
-        return reply.status(400).send({ error: 'O PDF é obrigatório' });
+      if (!pdfBase64 || !name || !recipientEmail) {
+        return reply.status(400).send({ error: 'PDF, nome e email do destinatário são obrigatórios' });
       }
 
       console.log(`📤 Enviando PDF para o Dropbox...`);
@@ -83,33 +71,20 @@ export const sendPdfToEmail: FastifyPluginAsync = async (app) => {
       const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
       // Fazer upload do PDF no Dropbox
-      const fileId = await uploadPdfToDropbox(pdfBuffer, `Pedido - ${FormData.name}.pdf`);
-
-      console.log('📁 PDF carregado no Dropbox com sucesso! ID:', fileId);
+      const filePath = await uploadPdfToDropbox(pdfBuffer, `Pedido - ${name}.pdf`);
+      console.log('📁 PDF carregado no Dropbox com sucesso!', filePath);
 
       // Gerar um link compartilhável
-      const pdfLink = await getSharedLink(fileId);
-
+      const pdfLink = await getSharedLink(filePath);
       console.log('🔗 Link do PDF gerado com sucesso:', pdfLink);
 
-      // Enviar o email com o link do PDF
-      await sendEmailWithPdfLink(pdfLink);
+      // Enviar o email com o link do PDF via EmailJS
+      await sendEmailWithPdfLink(pdfLink, recipientEmail);
 
-      console.log('📩 Email enviado com sucesso!');
-
-      reply.send({ message: `PDF enviado para ${env.HAMBURGUERIA_EMAIL}!`, pdfLink });
+      reply.send({ message: `PDF enviado para ${recipientEmail}!`, pdfLink });
     } catch (error) {
-      if (error instanceof Error) {
-        console.error('❌ Erro ao enviar o email:', error.message);
-        reply.status(500).send({ error: 'Erro ao enviar o email', details: error.message });
-      } else {
-        console.error('❌ Erro desconhecido:', error);
-        reply.status(500).send({ error: 'Erro ao enviar o email', details: 'Erro inesperado' });
-      }
+      console.error('❌ Erro ao enviar o email:', error);
+      reply.status(500).send({ error: 'Erro ao enviar o email', details: error instanceof Error ? error.message : 'Erro inesperado' });
     }
   });
 };
-
-function useTranslation(): { t: any; } {
-  throw new Error('Function not implemented.');
-}
