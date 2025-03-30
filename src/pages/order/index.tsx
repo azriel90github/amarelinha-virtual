@@ -370,6 +370,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
             <div className="py-4">
                 <div className="flex flex-col gap-1 w-full">
+                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Nome</label>
                   <input
                     type="text"
                     name="name"
@@ -386,6 +387,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   </div>
 
                   {/** <span className='error'>Preencha o seu e-mail corretamente.</span> */}
+                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Número</label>
                   <input
                     type="number"
                     name="number"
@@ -400,6 +402,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                       <p className="text-errorColor text-sm">{formErrors.number}</p>
                     )}
                   </div>
+                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Método de pagamento</label>
                   <input
                     readOnly
                     value={formData.paymentMethod} // Use o valor do estado
@@ -465,6 +468,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                       </div>
                     </div>
                   )}
+                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Cidade / bairro / rua</label>
                   <input
                     type="text"
                     name="cityOrNeighborhood"
@@ -478,6 +482,8 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                     <p className="text-errorColor text-sm">{formErrors.cityOrNeighborhood}</p>
                   )}
                   </div>
+
+                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Ponto de referência</label>
                   <input
                     type="text"
                     name="landmark"
