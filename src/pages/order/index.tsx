@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CreditCard, FileText, HandCoins, Landmark, MailPlus, PackageCheck, Truck, X } from "lucide-react";
+import { CircleDollarSign, CreditCard, FileDigit, FileText, HandCoins, Landmark, LocateFixed, MailPlus, MapPin, PackageCheck, Truck, UserRound, X } from "lucide-react";
 import {
   RotateCcw,
   Send,
@@ -370,7 +370,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
             <div className="py-4">
                 <div className="flex flex-col gap-1 w-full">
-                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Nome</label>
+                  <label className="text-colorButton font-semibold mt-5 ml-1 mb-2 mr-3 flex items-center justify-between" htmlFor="name">
+                    Nome
+                    <UserRound />
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -387,7 +390,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   </div>
 
                   {/** <span className='error'>Preencha o seu e-mail corretamente.</span> */}
-                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Número</label>
+                  <label className="text-colorButton font-semibold mt-5 ml-1 mb-2 mr-3 flex items-center justify-between" htmlFor="name">
+                    Número
+                    <FileDigit />
+                  </label>
                   <input
                     type="number"
                     name="number"
@@ -402,7 +408,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                       <p className="text-errorColor text-sm">{formErrors.number}</p>
                     )}
                   </div>
-                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Método de pagamento</label>
+                  <label className="text-colorButton font-semibold mt-5 ml-1 mb-2 mr-3 flex items-center justify-between" htmlFor="name">
+                    Método de pagamento
+                    <CircleDollarSign />
+                  </label>
                   <input
                     readOnly
                     value={formData.paymentMethod} // Use o valor do estado
@@ -468,7 +477,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                       </div>
                     </div>
                   )}
-                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Cidade / bairro / rua</label>
+                  <label className="text-colorButton font-semibold mt-5 ml-1 mb-2 mr-3 flex items-center justify-between" htmlFor="name">
+                    Cidade / bairro / rua
+                    <MapPin />
+                  </label>
                   <input
                     type="text"
                     name="cityOrNeighborhood"
@@ -483,7 +495,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   )}
                   </div>
 
-                  <label className="text-colorButton mt-3 ml-2 mb-1" htmlFor="name">Ponto de referência</label>
+                  <label className="text-colorButton font-semibold mt-5 ml-2 mb-2 mr-2 flex items-center justify-between" htmlFor="name">
+                    Ponto de referência
+                    <LocateFixed />
+                  </label>
                   <input
                     type="text"
                     name="landmark"
@@ -501,7 +516,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
                 <div className="flex flex-col gap-3 w-72 py-5">
                 <button
-                  className="flex transition duration-400 bg-buttonColor hover:bg-moneyColor text-zinc-100 hover:text-zinc-50 py-3 px-6 rounded-2xl justify-between"
+                  className="flex mt-6 transition duration-400 bg-buttonColor hover:bg-moneyColor text-zinc-100 hover:text-zinc-50 py-3 px-6 rounded-2xl justify-between"
                   type="submit"
                   onSubmit={handleSubmit} // Certifique-se de que o onClick está chamando handleSubmit
                 >
